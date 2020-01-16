@@ -17,7 +17,7 @@ include("login.php");
     <title>Bem Vindo, ...</title>
   </head>
   <body>
-  
+
   <div class="menu">
     <img src="img/certa.png" alt="">
     <ul class="nav justify-content-center">
@@ -26,5 +26,9 @@ include("login.php");
     <button type="button" class="btn btn-outline" href="produtos.php">Controle de Produtos</button>
     <button type="button" class="btn btn-outline" href="vendas.php">Vendas</button>
     <button type="button" class="btn btn-outline" href="analise.php">Análise</button>  
+    <a href="acessar.php"><button type="button" class="btn btn-outline" >Logar</button></a>  
+    <label><?php if(isset($_SESSION['login'])){echo " Bem-vindo: "; echo $_SESSION['login']; echo '<a href="logout.php" ><button type="button" class="btn btn-primary btn-lg"   name="logout">Logout</button></a>';}else{echo "Desconectado"; echo  "<br>"; } ?></label>
+ 
     </ul>    
+    
 </div>
