@@ -18,8 +18,59 @@ include("login.php");
   </head>
   <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light menucolor">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <img src="img/certa.png"  class="img-fluid w-25 p-3 imgsize" alt="">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light " href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+    <?php
+      if(isset($_SESSION['login'])){
+      echo '<li class="nav-item active">
+        <a class="nav-link text-light" href="listClientes.php">Controle de Clientes<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Controle de Produtos <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Vendas<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Análise<span class="sr-only">(current)</span></a>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Olá '.$_SESSION['login'].'
+        </a>
+        <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
+          <a  class="dropdown-item "  href="logout.php">Sair</a>
+        </div>
+      </li>
+  
+      
+      
+      
+      ';
+      
+    }else{ 
+      echo '<li class="nav-item active ">
+      <a class="nav-link text-light" href="acessar.php">Entrar <span class="sr-only">(current)</span></a>
+    </li>';
+
+      }
+      ?>
+    </ul>
+  </div>
+</nav>
+
+<!--
   <div class="menu">
-    <img src="img/certa.png" alt="">
     <ul class="nav justify-content-center">
     <button type="button" class="btn btn-outline" href="index.php">Home</button>
     <button type="button" class="btn btn-outline" href="clientes.php">Controle de Clientes</button>
@@ -31,4 +82,4 @@ include("login.php");
  
     </ul>    
     
-</div>
+</div> -->
