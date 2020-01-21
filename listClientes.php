@@ -13,9 +13,9 @@ if(isset($_SESSION['login'])){
 ?>
 
 <h1 class="text-center">Lista de Clientes</h1>
-<a href="formClientes.php"><button type="button">Cadastrar clientes</button></a>
-<table class="table">
-    <thead>
+<a href="formClientes.php"><button type="button">Add Cliente</button></a>
+<table class="table ">
+    <thead class="thead-light">
         <tr>
             <th>ID</th>
             <th>Nome</th>
