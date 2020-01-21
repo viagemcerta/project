@@ -1,6 +1,5 @@
 <?php
 
-
 include('header.php');
 if(isset($_SESSION['login'])){ 
   
@@ -15,57 +14,48 @@ if(isset($_SESSION['login'])){
 <div class="container">
     <h1 class="text-center">Adicionar cliente</h1>
 <form>
+  <div class="form">
+    <div class="form-group ">
+      <label for="inputName4">Nome</label>
+      <input type="text" class="form-control" id="inputName4">
+    </div>
+    <div class="form-group  ">
+      <label for="inputEmail4">E-mail</label>
+      <input type="text" class="form-control" id="inputEmail4">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label for="inputData">Data de nascimento</label>
+    <input type="date" class="form-control" id="inputdata" placeholder="00/00/0000">
+  </div>
+  <div class="form-group ">
+    <label for="inputCpf">CPF</label>
+    <input type="text" maxlength="11" class="form-control" id="inputCpf" placeholder="000.000.000-00">
+  </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
+      <label for="inputCity">Partida</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
+    <div class="form-group col-md-6">
+      <label for="inputState">Destino</label>
+      <input type="text" class="form-control" id="inputCity">
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+    <div class="form-group col-md-6">
+      <label for="inputState">Data de partida</label>
+      <input type="date" class="form-control" id="inputCity">
     </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+    <div class="form-group col-md-6">
+      <label for="inputState">Data de chegada</label>
+      <input type="date" class="form-control" id="inputCity">
+      <button type="submit" class="btn btn-link">Cadastrar</button>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
 </div>
 
-<?php
-
+<?php 
 
 include('footer.php');
-
 
 ?>
