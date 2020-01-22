@@ -4,6 +4,8 @@
 include("login.php");
 
 
+$_SESSION['login'] = "testeProfessor";
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,16 +25,7 @@ include("login.php");
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <img src="img/certa.png"  class="img-fluid w-25 p-3 imgsize" alt="">
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+ 
   
   <img src="img/certa.png"  class="img-fluid w-25 p-3 imgsize" alt="">
 
