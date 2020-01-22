@@ -3,8 +3,8 @@
 
 include("login.php");
 
-
-$_SESSION['login'] = "testeProfessor";
+//utilizei para mostrar para o professor de startup
+//$_SESSION['login'] = "testeProfessor";
 
 ?>
 <!DOCTYPE html>
