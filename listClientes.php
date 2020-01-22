@@ -10,6 +10,15 @@ if(isset($_SESSION['login'])){
     </script>';
 }
 
+
+
+
+$querySelect = "select * from addcliente where situacao = 'ativo' "; 
+$queryBanco = mysqli_query($conn, $querySelect);
+
+
+
+
 ?>
 
 <h1 class="text-center">Lista de Clientes</h1>
@@ -17,7 +26,6 @@ if(isset($_SESSION['login'])){
 <table class="table ">
     <thead class="thead-light">
         <tr>
-            <th>ID</th>
             <th>Nome</th>
             <th>Email</th>
             <th>Data de Nascimento</th>
@@ -31,6 +39,44 @@ if(isset($_SESSION['login'])){
         </tr>
 
     </thead>
+    <tbody>
+        
+            <?php
+
+            while($array = mysqli_fetch_array($queryBanco)){
+                $id = $array['id_cliente'];
+                $nome = $array['nome']; 
+                $email = $array['email']; 
+                $dta_nascimento = $array['dta_nascimento']; 
+                $cpf = $array['CPF']; 
+                $partida = $array['partida']; 
+                $destino = $array['destino']; 
+                $dta_partida = $array['dta_partida']; 
+                $dta_chegada = $array['dta_chegada']; 
+
+
+
+                echo '<tr><td>'.$nome.'</td>
+                <td>'.$email.'</td>
+                <td>'.$dta_nascimento.'</td>
+                <td>'.$cpf.'</td>
+                <td>'.$partida.'</td>
+                <td>'.$destino.'</td>
+                <td>'.$dta_partida.'</td>
+                <td>'.$dta_chegada.'</td>
+                <td>Editar</td>
+                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td></tr>';
+                
+
+            }
+
+            
+
+
+
+            ?>
+        
+    </tbody>
 
 
 

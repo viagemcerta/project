@@ -5,7 +5,7 @@ if(isset($_POST['addcliente'])){
 
 $nome = $_POST['nome'];
 $email = $_POST['email']; 
-$cpf = $_POST['cpf']; 
+$cpf = $_POST['CPF']; 
 $dta_nascimento = $_POST['dta_nascimento'];
 $destino = $_POST['destino']; 
 $partida = $_POST['partida']; 
@@ -14,8 +14,8 @@ $dta_chegada = $_POST['dta_chegada'];
 
 include('connection.php');
 
-$query = "insert into addcliente(nome,email,cpf,dta_nascimento,destino,partida,dta_partida,dta_chegada)
-values('$nome','$email','$cpf','$dta_nascimento','$destino','$partida','$dta_partida','$dta_chegada')";
+$query = "insert into addcliente(nome,email,CPF,dta_nascimento,destino,partida,dta_partida,dta_chegada,situacao)
+values('$nome','$email','$cpf','$dta_nascimento','$destino','$partida','$dta_partida','$dta_chegada','ativo')";
 
 if(mysqli_query($conn, $query)){ 
     echo "cadastro ok"; 
