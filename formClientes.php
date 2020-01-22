@@ -48,7 +48,7 @@ if(isset($_SESSION['login'])){
     <div class="form-group col-md-6">
       <label for="inputState">Data de chegada</label>
       <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
-      <button name="addcliente" type="submit" class="btn btn-link">Cadastrar</button>
+      <button name="addcliente" type="submit" class="btn btn-dark">Cadastrar</button>
     </div>
   </div>
 </form>
