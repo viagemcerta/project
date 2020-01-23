@@ -1,9 +1,23 @@
 .menucolor{
 
-    background-color: #49576b !important;
+    background-color: #38B6FF !important;
   
 }
-
+#login{
+    width: 500px;
+    height: 344px;
+}
+.btn2{
+    color:#FF914D;
+    background-color:#FFFFFF;
+}
+.btn{
+    align-content: center;
+    color:#FFFFFF;
+    background-color:#FF914D;
+    width: 268px;
+    height: 34px;
+}
 
 /*img{
 

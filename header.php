@@ -16,7 +16,7 @@ include("login.php");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Bem Vindo, ...</title>
+    <title>VIAGEM CERTA</title>
   </head>
   <body>
 
@@ -27,20 +27,20 @@ include("login.php");
 
  
   
-  <img src="img/certa.png"  class="img-fluid w-25 p-3 imgsize" alt="">
+  <img src="img/VIAGEMCERTA.png"  class="img-fluid w-25 p-3 imgsize " alt="">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse menucolor" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
-      <li class="nav-item active">
+      <li class="nav-item active ">
         <a class="nav-link text-light " href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
     <?php
       if(isset($_SESSION['login'])){
       echo '<li class="nav-item active">
-        <a class="nav-link text-light" href="listClientes.php">Controle de Clientes<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="listClientes.php">Clientes<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-light" href="#">Controle de Produtos <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="#">Produtos <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link text-light" href="#">Vendas<span class="sr-only">(current)</span></a>
