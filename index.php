@@ -14,7 +14,7 @@
   <div class="container">
     <h1 class="text-center text-primary">Viagem Certa</h1>
     <div class="mx-auto w-50 p-3" >
-
+        <img class="rounded mx-auto d-block w-50 p-3" src="img/2.0.png">
         <button class="btn btn-lg text-uppercase btn-block" type="button" >Login</button>
         <p class="text-center" >Ainda não é cadastrado?</p>
     </div>
