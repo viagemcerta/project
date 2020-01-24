@@ -10,36 +10,36 @@ if(isset($_SESSION['login'])){
 }
 
 ?>
-
 <div class="container">
-    <h1 class="text-center">Adicionar Produto</h1>
-<form>
+    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar produto</h1>
+<form action="addcliente.php" method="post" >
   <div class="form">
-    <div class="form-group ">
-      <label for="inputName4">Nome</label>
-      <input type="text" class="form-control" id="inputName4">
-    </div>
-    <div class="form-group  ">
-      <label for="inputEmail4">Categoria</label>
-      <input type="text" class="form-control" id="inputEmail4">
-    </div>
-  </div>
-  <div class="form-group ">
-    <label for="inputData">Valor</label>
-    <input type="text" class="form-control" id="inputdata" placeholder="R$">
-  </div>
-  <div class="form-group ">
-    <label for="inputCpf">Quantidade</label>
-    <input type="text" class="form-control" id="inputCpf" >
-  </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Abastecimento</label>
-      <input type="text" class="form-control" id="inputCity">
+    <div class="form-group col-md-3">
+      <label for="inputName4">Nome</label>
+      <input type="text" name="nome" class="form-control" id="inputName4">
     </div>
-      <button type="submit" class="btn btn-link">Cadastrar</button>
+    <div class="form-group col-md-3 ">
+      <label for="inputEmail4">Categoria</label>
+      <input type="text" class="form-control" name="email" id="inputEmail4">
     </div>
+    <div class="form-row w-100">
+  <div class="form-group col-md-3">
+    <label for="inputData">Preço</label>
+    <input type="number" class="form-control" name="dta_nascimento" id="inputdata" placeholder="R$">
   </div>
+  <div class="form-group col-md-3">
+    <label for="inputCpf">Quantidade</label>
+    <input type="number" class="form-control" name="CPF" id="inputCpf">
+  </div>
+  <div class="form-row w-100">
+    <div class="form-group col-md-3">
+      <label for="inputCity">Data de abastecimento</label>
+      <input type="date" class="form-control" name="partida" id="inputCity">
+    </div>
+    <div>
+    <button type="submit" class="btn btn-outline login">Cadastrar</button>
+</div>
 </form>
 </div>
 

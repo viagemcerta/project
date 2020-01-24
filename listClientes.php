@@ -21,10 +21,9 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>
 
-<h1 class="text-center">Lista de Clientes</h1>
+<h1 class="text-center" style="color:#FF914D;">Lista de Clientes</h1>
 <a href="formClientes.php"><button type="button">Add Cliente</button></a>
-<table class="table ">
-    <thead class="thead-light">
+<table class="table">
         <tr>
             <th>Nome</th>
             <th>Email</th>
@@ -37,8 +36,6 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <th>Editar</th>
             <th>Excluir</th>
         </tr>
-
-    </thead>
     <tbody>
         
             <?php

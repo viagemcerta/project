@@ -1,24 +1,45 @@
+.container{
+ 
+}
 .menucolor{
 
     background-color: #38B6FF !important;
   
 }
+.titulo{
+    align-content: flex-end;
+}
+.all{
+    width: 100%;
+    height: 100%;
+    background-color: #38B6FF;
+    
+}
 #login{
     width: 500px;
     height: 344px;
 }
-.btn2{
+.recuperar{
     color:#FF914D;
     background-color:#FFFFFF;
 }
-.btn{
+.login{
     align-content: center;
     color:#FFFFFF;
     background-color:#FF914D;
     width: 268px;
     height: 34px;
+    border-radius: 8px;
+    
 }
-
+.cadastro{
+margin-left:400px;
+width: 268px;
+height: 36.47px;
+color: #FFFFFF;
+background: #FF914D;
+border-radius: 3px;
+}
 /*img{
 
     position: absolute;
@@ -31,7 +52,7 @@
 
 
 .imgsize{ 
-    max-width: 10% !important;
+    max-width: 15% !important;
 }
 
 
