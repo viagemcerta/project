@@ -12,10 +12,9 @@ if(isset($_SESSION['login'])){
 
 ?>
 
-<h1 class="text-center">Lista de Produtos</h1>
-<a href="formProdutos.php"><button type="button">Add Produtos</button></a>
+<h1 class="text-center" style="color:#FF914D;">Lista de Produtos</h1>
 <table class="table ">
-    <thead class="thead-light">
+    <thead class="thead">
         <tr>
             <th>ID</th>
             <th>Nome</th>

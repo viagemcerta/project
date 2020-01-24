@@ -12,25 +12,25 @@ if(isset($_SESSION['login'])){
 ?>
 
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar cliente</h1>
-<form action="addcliente.php" method="post" >
+    <h1 class="text-center" style="color: #FF914D; text-align:center;">Nova Venda</h1>
+<form action="addvenda.php" method="post" >
   <div class="form">
   <div class="form-row">
-    <div class="form-group col-md-3">
-      <label for="inputName4">Nome</label>
-      <input type="text" name="nome" class="form-control" id="inputName4">
-    </div>
-    <div class="form-group col-md-3 ">
-      <label for="inputEmail4">E-mail</label>
-      <input type="text" class="form-control" name="email" id="inputEmail4">
-    </div>
-  <div class="form-group col-md-3">
-    <label for="inputData">Data de nascimento</label>
-    <input type="date" class="form-control" name="dta_nascimento" id="inputdata" placeholder="00/00/0000">
-  </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="inputCpf" placeholder="000.000.000-00">
+    <input type="number" maxlength="11" class="form-control" name="CPF" id="inputCpf" placeholder="000.000.000-00">
+  </div>
+    <div class="form-group col-md-3 ">
+      <label for="inputEmail4">Produto</label>
+      <input type="text" class="form-control" name="produto" id="inputEmail4">
+    </div>
+  <div class="form-group col-md-3">
+    <label for="inputData">Categoria</label>
+    <input type="text" class="form-control" name="categoria" id="inputdata" >
+  </div>
+  <div class="form-group col-md-3">
+    <label for="inputCpf">Preço</label>
+    <input type="number" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
@@ -49,7 +49,7 @@ if(isset($_SESSION['login'])){
       <label for="inputState">Data de chegada</label>
       <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
-    <button name="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
+    <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
 </div>
 

@@ -23,7 +23,6 @@ if(isset($_SESSION['login'])){
       <label for="inputEmail4">Categoria</label>
       <input type="text" class="form-control" name="email" id="inputEmail4">
     </div>
-    <div class="form-row w-100">
   <div class="form-group col-md-3">
     <label for="inputData">Preço</label>
     <input type="number" class="form-control" name="dta_nascimento" id="inputdata" placeholder="R$">
@@ -38,7 +37,7 @@ if(isset($_SESSION['login'])){
       <input type="date" class="form-control" name="partida" id="inputCity">
     </div>
     <div>
-    <button type="submit" class="btn btn-outline login">Cadastrar</button>
+    <button type="submit" class="btn btn-outline cadastrar">Cadastrar</button>
 </div>
 </form>
 </div>
