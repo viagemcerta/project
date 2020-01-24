@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <style>
+  p{ 
+    color: #FF914D;
+  }
+  
+  
+  
+  
+  </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,12 +20,12 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  <div class="container">
-    <h1 class="text-center text-primary">Viagem Certa</h1>
+  <div class="container mt-5">
+    <h1 class="text-center text-primary text-uppercase">Viagem Certa</h1>
     <div class="mx-auto w-50 p-3" >
         <img class="rounded mx-auto d-block w-50 p-3" src="img/2.0.png">
-        <button class="btn btn-lg text-uppercase btn-block" type="button" >Login</button>
-        <p class="text-center" >Ainda não é cadastrado?</p>
+       <a href="acessar.php" ><button class="btn w-50 p-2 text-light mx-auto text-uppercase btn-block" style="background-color: #38B6FF;" type="button" >Login</button></a>
+        <p class="text-center"  >Ainda não é cadastrado?</p>
     </div>
   
   </div>
