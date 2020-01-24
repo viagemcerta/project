@@ -36,14 +36,28 @@ include("login.php");
       </li>
     <?php
       if(isset($_SESSION['login'])){
-      echo '<li class="nav-item active">
-        <a class="nav-link text-light" href="listClientes.php">Clientes<span class="sr-only">(current)</span></a>
+      echo '
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="listClientes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
+        <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
+          <a  class="dropdown-item "  href="listClientes.php">Lista de Clientes</a>
+          <a  class="dropdown-item "  href="formClientes.php">Adicionar Clientes</a>
+        </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="#">Produtos <span class="sr-only">(current)</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="listClientes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
+        <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
+          <a  class="dropdown-item "  href="listProdutos.php">Lista de Produtos</a>
+          <a  class="dropdown-item "  href="formProdutos.php">Adicionar Produtos</a>
+        </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="#">Vendas<span class="sr-only">(current)</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="listClientes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vendas</a>
+        <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
+          <a  class="dropdown-item "  href="">Lista de vendas</a>
+          <a  class="dropdown-item "  href="">Adicionar vendas</a>
+          <a  class="dropdown-item "  href="">Vendas disponíveis</a>
+        </div>
       </li>
       <li class="nav-item active">
         <a class="nav-link text-light" href="#">Análise<span class="sr-only">(current)</span></a>

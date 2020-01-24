@@ -1,8 +1,13 @@
-
+.container{
+ 
+}
 .menucolor{
 
     background-color: #38B6FF !important;
   
+}
+.titulo{
+    align-content: flex-end;
 }
 .all{
     width: 100%;
@@ -24,6 +29,8 @@
     background-color:#FF914D;
     width: 268px;
     height: 34px;
+    border-radius: 8px;
+    
 }
 .cadastro{
 margin-left:400px;
