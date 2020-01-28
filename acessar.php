@@ -41,4 +41,5 @@ include("footer.php");
 ?>
 <script>
   $("nav").css("display", "none");
+  $("body").css("background-color", "#38B6FF");
 </script>
