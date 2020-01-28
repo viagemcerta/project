@@ -20,6 +20,7 @@
 .recuperar{
     color:#FF914D;
     background-color:#FFFFFF;
+    margin-left: 135px;
 }
 .login{
     align-content: center;
@@ -68,3 +69,10 @@
     
 }
 
+.posicao{
+
+   
+    align-content: flex-start;
+    margin-left: 65px;
+    
+}
