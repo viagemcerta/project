@@ -6,7 +6,7 @@ include("header.php");
 ?>
 
 <div class="container">
-  <h1 onclick="sumir()" class="h1" style="color:#FFFFFF">Viagem Certa</h1>
+  <h1  class="h1" style="color:#FFFFFF">Viagem Certa</h1>
   <div id="login" class="card container">
     <div class="card-body">
       <h5 class="card-title" style="color: #38B6FF; text-align:center;">Login</h5>

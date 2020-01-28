@@ -12,34 +12,23 @@ $pass = $_POST['senha'];
 
 
 
+$queryLogin = "select * from login where vendedor = '$login' and senha = '$pass' "; 
+$queryBanco = mysqli_query($conn, $queryLogin);
+$queryArray = mysqli_fetch_array($queryBanco);
 
-
-
-//Fazendo a validação de login para saber se o login está correto
-$queryValidate = " select * from login where vendedor = '$login' and senha = $pass";
-if(mysqli_query($conn, $queryValidate)){ 
-    echo "Login success! ";
-    $_SESSION['login'] = $login;
-  //Isso vai dar problema depois quando for subir o site, então devemos trocar por um redirecionamento js
+if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
+  echo "logado com sucesso!";
+  $_SESSION['login'] = $login;
   header("refresh:3;url= painel.php");
-
 }else{ 
-    echo "Failed to login";
-    $logado = 2;
-    //Isso vai dar problema depois quando for subir o site, então devemos trocar por um redirecionamento js
-    header("refresh:3;url= index.php");
-}
-
-
-
-}
-
-
-
-
-if(isset($_POST{'logout'})){ 
-  session_destroy(); 
+  echo "Erro ao tentar fazer loginm";
   header("refresh:3;url= index.php");
+}
+
+
+
+
+
 }
 
 
