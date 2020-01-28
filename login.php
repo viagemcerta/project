@@ -21,7 +21,7 @@ if(mysqli_query($conn, $queryValidate)){
     echo "Login success! ";
     $_SESSION['login'] = $login;
   //Isso vai dar problema depois quando for subir o site, então devemos trocar por um redirecionamento js
-  header("refresh:3;url= index.php");
+  header("refresh:3;url= painel.php");
 
 }else{ 
     echo "Failed to login";

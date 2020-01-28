@@ -1,6 +1,6 @@
 <?php
 
-
+include("connection.php");
 include("login.php");
 
 //utilizei para mostrar para o professor de startup
@@ -32,7 +32,7 @@ include("login.php");
   <div class="collapse navbar-collapse menucolor" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item active ">
-        <a class="nav-link text-light " href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light " href="painel.php">Home <span class="sr-only">(current)</span></a>
       </li>
     <?php
       if(isset($_SESSION['login'])){
