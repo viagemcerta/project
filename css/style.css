@@ -40,23 +40,13 @@
     margin: 150px 50%;
 }
 .cadastro{
-margin-left:400px;
-width: 268px;
-height: 36.47px;
-color: #FFFFFF;
-background: #FF914D;
-border-radius: 3px;
+    margin-left:400px;
+    width: 268px;
+    height: 36.47px;
+    color: #FFFFFF;
+    background: #FF914D;
+    border-radius: 3px;
 }
-/*img{
-
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 90px;
-    margin: 20px 90px;
-}*/
-
-
 
 .imgsize{ 
     max-width: 15% !important;
@@ -70,5 +60,11 @@ border-radius: 3px;
 
 .onlyblack a{ 
     color: black !important;
+}
+
+.primeiro{
+
+    margin-top: 100px;
+    
 }
 

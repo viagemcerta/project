@@ -4,10 +4,10 @@
 include("header.php");
 
 ?>
-
-<div class="container">
+<div class="primeiro">
+<div class="container" style="background-color: #38B6FF">
 <div>
-<h1 class="h1" style="color:#38B6FF; text-align: center;">Viagem Certa</h1>
+<h1 class="h1" style="color:#FFFFFF; text-align: center;">Viagem Certa</h1>
 </div>
 <div id="login" class="card container">
   <div class="card-body">
@@ -30,7 +30,8 @@ include("header.php");
 </div>
 </form>
 </div>
-  </div>
+</div>
+</div>
 </div>
 </div>
 
