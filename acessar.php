@@ -22,10 +22,10 @@ include("header.php");
     <label for="exampleInputPassword1">Senha</label>
     <input placeholder="Digite a senha..." type="password" name="senha" class="form-control" id="exampleInputPassword1">
   </div>
-  <div>
-  <button type="submit" name="logar" class="btn btn-outline login">Login</button>
+  <div class="text-center">
+  <button type="submit" name="logar" class="btn btn-outline login ">Login</button>
 </div>
-<div>
+<div class="text-center">
   <a href="" name="" class="recuperar">Esqueceu a senha?</a>
 </div>
 </form>

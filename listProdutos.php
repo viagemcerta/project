@@ -9,6 +9,9 @@ if(isset($_SESSION['login'])){
     window.location.href = "index.php";
     </script>';
 }
+$querySelect = "select * from produtos"; 
+$queryBanco = mysqli_query($conn, $querySelect);
+
 
 ?>
 
@@ -27,6 +30,39 @@ if(isset($_SESSION['login'])){
         </tr>
 
     </thead>
+    <tbody>
+        
+        <?php
+
+        while($array = mysqli_fetch_array($queryBanco)){
+            $id = $array['id_produto'];
+            $nome = $array['nome']; 
+            $email = $array['categoria']; 
+            $dta_nascimento = $array['valor']; 
+            $cpf = $array['qnt_estoque']; 
+            $partida = $array['dta_abastecimento']; 
+
+
+
+            echo '<tr><td>'.$id.'</td>
+            <td>'.$nome.'</td>
+            <td>'.$email.'</td>
+            <td>'.$dta_nascimento.'</td>
+            <td>'.$cpf.'</td>
+            <td>'.$partida.'</td>
+            <td>Editar</td>
+            <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td></tr>';
+            
+
+        }
+
+        
+
+
+
+        ?>
+    
+</tbody>
 
 
 
