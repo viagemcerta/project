@@ -23,9 +23,13 @@ include("header.php");
     <input placeholder="Digite a senha..." type="password" name="senha" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="text-center">
+<<<<<<< HEAD
   <button type="submit" name="logar" class="btn btn-outline login">Login</button>
+=======
+  <button type="submit" name="logar" class="btn btn-outline login ">Login</button>
+>>>>>>> origin/victor
 </div>
-<div>
+<div class="text-center">
   <a href="" name="" class="recuperar">Esqueceu a senha?</a>
 </div>
 </form>
