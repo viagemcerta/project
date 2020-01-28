@@ -2,9 +2,10 @@
 
 include("connection.php");
 include("login.php");
-
 //utilizei para mostrar para o professor de startup
 //$_SESSION['login'] = "testeProfessor";
+
+
 
 ?>
 <!DOCTYPE html>
@@ -34,9 +35,7 @@ include("login.php");
       <li class="nav-item active ">
         <a class="nav-link text-light " href="painel.php">Home <span class="sr-only">(current)</span></a>
       </li>
-    <?php
-      if(isset($_SESSION['login'])){
-      echo '
+    
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="listClientes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
@@ -64,25 +63,12 @@ include("login.php");
       </li> 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Olá '.$_SESSION['login'].'
+       <?php echo  'Olá '.$_SESSION['login'].' '; ?>
         </a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
           <a  class="dropdown-item "  href="logout.php">Sair</a>
         </div>
       </li>
-  
-      
-      
-      
-      ';
-      
-    }else{ 
-      echo '<li class="nav-item active ">
-      <a class="nav-link text-light" href="acessar.php">Entrar <span class="sr-only">(current)</span></a>
-    </li>';
-
-      }
-      ?>
     </ul>
   </div>
 </nav>

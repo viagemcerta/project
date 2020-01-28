@@ -7,6 +7,10 @@ include("header.php");
 $querySelect = "select * from addcliente where dta_partida >= '$atualdata'"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
+if(!isset($_SESSION['login'])){ 
+   echo ' <script>window.location.href = "index.php"</script>';
+    }
+
 ?>
 
 
@@ -82,7 +86,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
 
-
+include("footer.php");
 
 
 ?>
