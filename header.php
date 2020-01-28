@@ -54,8 +54,8 @@ include("login.php");
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="listClientes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vendas</a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
-          <a  class="dropdown-item "  href="">Lista de vendas</a>
-          <a  class="dropdown-item "  href="">Adicionar vendas</a>
+          <a  class="dropdown-item "  href="listVendas.php">Lista de vendas</a>
+          <a  class="dropdown-item "  href="formVenda.php">Adicionar vendas</a>
           <a  class="dropdown-item "  href="">Vendas disponíveis</a>
         </div>
       </li>

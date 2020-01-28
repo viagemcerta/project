@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
   <style>
+  .container{
+
+    margin-top: 100px;
+  }
   p{ 
     color: #FF914D;
   }
-  
-  
-  
   
   </style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -23,14 +24,16 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  <div class="container mt-5">
+ 
+  <div class="container">
     <h1 class="text-center text-primary text-uppercase" onclick="clicks()">Viagem Certa</h1>
     <div class="mx-auto w-50 p-3" >
         <img class="rounded mx-auto d-block w-50 p-3" src="img/2.0.png">
        <a href="acessar.php" ><button class="btn w-50 p-2 text-light mx-auto text-uppercase btn-block" style="background-color: #38B6FF;" type="button" >Login</button></a>
-        <p id="p"class="text-center"  >Ainda não é cadastrado?</p>
+        <p id="p" class="text-center text-link">Ainda não é cadastrado?</p>
     </div>
-
+    </div>
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/script.js" type="text/javascript" ></script>

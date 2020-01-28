@@ -1,6 +1,5 @@
 <?php
 
-
 include('header.php');
 if(isset($_SESSION['login'])){ 
   
@@ -10,27 +9,21 @@ if(isset($_SESSION['login'])){
     </script>';
 }
 
-
-
-
-$querySelect = "select * from addcliente where situacao = 'ativo' "; 
+$querySelect = "select * from vendas"; 
 $queryBanco = mysqli_query($conn, $querySelect);
-
-
-
 
 ?>
 
-<h1 class="text-center" style="color:#FF914D;">Lista de Clientes</h1>
+<h1 class="text-center" style="color:#FF914D;">Lista de Vendas</h1>
 <table class="table">
        <thead class="thead">
         <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Data de Nascimento</th>
             <th>CPF</th>
-            <th>Partida</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Preço</th>
             <th>Destino</th>
+            <th>Partida</th>
             <th>Data da partida</th>
             <th>Data da chegada</th>
             <th>Editar</th>
@@ -42,24 +35,23 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <?php
 
             while($array = mysqli_fetch_array($queryBanco)){
-                $id = $array['id_cliente'];
-                $nome = $array['nome']; 
-                $email = $array['email']; 
-                $dta_nascimento = $array['dta_nascimento']; 
-                $cpf = $array['CPF']; 
+                $cpf = $array['cpf'];
+                $produto = $array['produto']; 
+                $categoria = $array['categoria']; 
+                $preço = $array['preço'];  
+                $destino = $array['destino'];
                 $partida = $array['partida']; 
-                $destino = $array['destino']; 
                 $dta_partida = $array['dta_partida']; 
                 $dta_chegada = $array['dta_chegada']; 
 
 
 
-                echo '<tr><td>'.$nome.'</td>
-                <td>'.$email.'</td>
-                <td>'.$dta_nascimento.'</td>
-                <td>'.$cpf.'</td>
-                <td>'.$partida.'</td>
+                echo '<tr><td>'.$cpf.'</td>
+                <td>'.$produto.'</td>
+                <td>'.$categoria.'</td>
+                <td>'.$preço.'</td>
                 <td>'.$destino.'</td>
+                <td>'.$partida.'</td>
                 <td>'.$dta_partida.'</td>
                 <td>'.$dta_chegada.'</td>
                 <td>Editar</td>
