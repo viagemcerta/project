@@ -65,14 +65,12 @@
 
 .primeiro{
 
-    margin-top: 100px;
+    margin-top: 150px;
     
 }
 
-.posicao{
+.titulo{
 
-   
-    align-content: flex-start;
-    margin-left: 65px;
-    
+    color: #38B6FF;
 }
+

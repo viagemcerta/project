@@ -4,8 +4,8 @@
 include("header.php");
 
 ?>
-<div class="primeiro">
-<div class="container" style="background-color: #38B6FF">
+
+<div class="container primeiro">
 <div>
 <h1 class="h1" style="color:#FFFFFF; text-align: center;">Viagem Certa</h1>
 </div>
@@ -22,8 +22,8 @@ include("header.php");
     <label for="exampleInputPassword1">Senha</label>
     <input placeholder="Digite a senha..." type="password" name="senha" class="form-control" id="exampleInputPassword1">
   </div>
-  <div>
-  <button type="submit" name="logar" class="btn btn-outline login posicao">Login</button>
+  <div class="text-center">
+  <button type="submit" name="logar" class="btn btn-outline login">Login</button>
 </div>
 <div>
   <a href="" name="" class="recuperar">Esqueceu a senha?</a>
@@ -33,7 +33,7 @@ include("header.php");
 </div>
 </div>
 </div>
-</div>
+
 
 
 <?php

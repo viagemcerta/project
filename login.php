@@ -21,7 +21,7 @@ if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){
   $_SESSION['login'] = $login;
   header("refresh:3;url= painel.php");
 }else{ 
-  echo "Erro ao tentar fazer loginm";
+  echo "Erro ao tentar fazer login";
   header("refresh:3;url= index.php");
 }
 
