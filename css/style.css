@@ -20,6 +20,7 @@
 .recuperar{
     color:#FF914D;
     background-color:#FFFFFF;
+    margin-left: 135px;
 }
 .login{
     align-content: center;
@@ -64,7 +65,28 @@
 
 .primeiro{
 
-    margin-top: 100px;
+    margin-top: 150px;
     
+}
+
+.titulo{
+
+    color: #38B6FF;
+}
+
+#inputGroupSelect{
+
+    margin-top: 32px;
+}
+
+.cadastro1{
+    align-content: center;
+    color:#FFFFFF;
+    background-color:#FF914D;
+    width: 268px;
+    height: 50px;
+    border-radius: 8px;
+    margin: 150px 0px 100px;
+
 }
 

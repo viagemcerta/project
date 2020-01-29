@@ -20,13 +20,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>VIAGEM CERTA</title>
   </head>
   <body>
  
-  <div class="container">
-    <h1 class="text-center text-primary text-uppercase" onclick="clicks()">Viagem Certa</h1>
+  <div class="container primeiro">
+    <h1 class="text-center text-uppercase titulo" onclick="clicks()">Viagem Certa</h1>
     <div class="mx-auto w-50 p-3" >
         <img class="rounded mx-auto d-block w-50 p-3" src="img/2.0.png">
        <a href="acessar.php" ><button class="btn w-50 p-2 text-light mx-auto text-uppercase btn-block" style="background-color: #38B6FF;" type="button" >Login</button></a>
