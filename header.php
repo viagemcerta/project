@@ -60,11 +60,11 @@ include("login.php");
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
           <a  class="dropdown-item "  href="listVendas.php">Lista de vendas</a>
           <a  class="dropdown-item "  href="formVenda.php">Adicionar vendas</a>
-          <a  class="dropdown-item "  href="">Vendas disponíveis</a>
+          <a  class="dropdown-item "  href="listVendasDisponiveis.php">Vendas disponíveis</a>
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-light" href="#">Análise<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="analise.php">Análise<span class="sr-only">(current)</span></a>
       </li> 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 

@@ -15,9 +15,9 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>
 
-<h1 class="text-center" style="color:#FF914D;">Lista de Produtos</h1>
+<h1 class="text-center" style="color:#38B6FF;">Lista de Produtos</h1>
 <table class="table ">
-    <thead class="thead">
+    <thead class="table table-bordered">
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -44,14 +44,17 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
 
-            echo '<tr><td>'.$id.'</td>
-            <td>'.$nome.'</td>
-            <td>'.$email.'</td>
-            <td>'.$dta_nascimento.'</td>
-            <td>'.$cpf.'</td>
-            <td>'.$partida.'</td>
-            <td><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Editar</button></a></td></tr>
-            <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td></tr>';
+            echo '
+            <tr>
+            <td scope="col">'.$id.'</td>
+            <td scope="col">'.$nome.'</td>
+            <td scope="col">'.$email.'</td>
+            <td scope="col">'.$dta_nascimento.'</td>
+            <td scope="col">'.$cpf.'</td>
+            <td scope="col">'.$partida.'</td>
+            <td scope="col"><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Editar</button></a></td>
+            <td scope="col"><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td>
+            </tr>';
             
 
         }

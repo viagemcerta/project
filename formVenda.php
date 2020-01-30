@@ -12,7 +12,9 @@ if(isset($_SESSION['login'])){
 ?>
 
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Nova Venda</h1>
+  <div class="titulo">
+    <h1 class="text-center" style="text-align:center;">Efetuar Venda</h1>
+  </div>
 <form action="addvenda.php" method="post" >
   <div class="form">
   <div class="form-row">

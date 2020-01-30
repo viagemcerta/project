@@ -12,7 +12,7 @@ if(isset($_SESSION['login'])){
 ?>
 
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar cliente</h1>
+    <h1 class="text-center" style="color: #38B6FF; text-align:center;">Adicionar cliente</h1>
 <form action="addcliente.php" method="post" >
   <div class="form">
   <div class="form-row">

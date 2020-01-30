@@ -21,9 +21,9 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>
 
-<h1 class="text-center" style="color:#FF914D;">Lista de Clientes</h1>
+<h1 class="text-center" style="color:#38B6FF;">Lista de Clientes</h1>
 <table class="table">
-       <thead class="thead">
+       <thead class="table table-bordered">
         <tr>
             <th>Nome</th>
             <th>Email</th>
