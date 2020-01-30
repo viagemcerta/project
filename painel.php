@@ -49,7 +49,7 @@ if(!isset($_SESSION['login'])){
 
             
             for($x = 0; $x < 5; $x++){
-            $array = mysqli_fetch_array($queryBanco);
+            if($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_cliente'];
                 $nome = $array['nome']; 
                 $email = $array['email']; 
@@ -69,7 +69,10 @@ if(!isset($_SESSION['login'])){
                 <td>'.$partida.'</td>
                 <td>'.$destino.'</td>
                 <td>'.$dta_partida.'</td>
-                <td>'.$dta_chegada.'</td>';                
+                <td>'.$dta_chegada.'</td>'; 
+            }else{ 
+                
+            }              
 
             }
 

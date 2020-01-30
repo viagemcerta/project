@@ -18,11 +18,12 @@ $query = "insert into addcliente(nome,email,CPF,dta_nascimento,destino,partida,d
 values('$nome','$email','$cpf','$dta_nascimento','$destino','$partida','$dta_partida','$dta_chegada','ativo')";
 
 if(mysqli_query($conn, $query)){ 
-    echo "cadastro ok"; 
+    echo ' <script>window.location.href = "formClientes.php"</script>';
+
 }else{ 
     echo "err";
 }
-
+ 
 
 
 
