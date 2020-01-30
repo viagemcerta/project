@@ -11,8 +11,11 @@ if(isset($_SESSION['login'])){
 
 ?>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar cliente</h1>
+    <h1 class="text-center" style="color: #38B6FF; text-align:center;">Adicionar cliente</h1>
 <form action="addcliente.php" method="post" >
   <div class="form">
   <div class="form-row">
@@ -30,7 +33,7 @@ if(isset($_SESSION['login'])){
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="inputCpf" placeholder="000.000.000-00">
+    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
@@ -52,6 +55,10 @@ if(isset($_SESSION['login'])){
     <button name="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
 </form>
 </div>
+
+<script type="text/javascript">
+            $("#cpf").mask("000.000.000-00");
+</script>
 
 <?php 
 

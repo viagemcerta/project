@@ -13,14 +13,15 @@ if($sql = mysqli_query($conn, $query)){
 }
 
 $list = mysqli_fetch_array($sql);
-$nome = $list['nome'];
+    $nome = $list['nome'];
     $categoria = $list['categoria'];
     $valor = $list['valor'];
-    $qnt_estoque = $list['qnd_estoque'];
+    $qnt_estoque = $list['qnt_estoque'];
     $dta_abastecimento = $list["dta_abastecimento"];
+
 echo '
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar produto</h1>
+    <h1 class="text-center" style="color: #FF914D; text-align:center;">Editar produto</h1>
     <form action="addproduto.php" method="post" >
 <div class="form">
   <div class="form-row">
