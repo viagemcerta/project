@@ -1,6 +1,10 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","") or die("Err no banco");
+
+
+if(!$conn = mysqli_connect("localhost","root","") or die("Err no banco")){
+
+}else{
 
 $banco = "create database viagemcerta";
 $bancoNovo = 0;
@@ -71,7 +75,7 @@ $tabelas3 =  'CREATE TABLE `login` (
 
   
     
-
+  }
 
 //conexão com o banco de dados
 //$conn = mysqli_connect("localhost","root","","viagemcerta") or die("Err no banco");
