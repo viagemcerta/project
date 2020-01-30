@@ -17,6 +17,7 @@ include("login.php");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    
 
     <title>VIAGEM CERTA</title>
   </head>
@@ -60,11 +61,11 @@ include("login.php");
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
           <a  class="dropdown-item "  href="listVendas.php">Lista de vendas</a>
           <a  class="dropdown-item "  href="formVenda.php">Adicionar vendas</a>
-          <a  class="dropdown-item "  href="">Vendas disponíveis</a>
+          <a  class="dropdown-item "  href="listVendasDisponiveis.php">Vendas disponíveis</a>
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-light" href="#">Análise<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="analise.php">Análise<span class="sr-only">(current)</span></a>
       </li> 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 

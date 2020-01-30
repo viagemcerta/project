@@ -11,7 +11,7 @@ if(isset($_SESSION['login'])){
 
 ?>
 <div class="container">
-    <h1 class="text-center" style="color: #FF914D; text-align:center;">Adicionar produto</h1>
+    <h1 class="text-center" style="color: #38B6FF; text-align:center;">Adicionar produto</h1>
     <form action="addproduto.php" method="post" >
 <div class="form">
   <div class="form-row">
@@ -41,7 +41,7 @@ if(isset($_SESSION['login'])){
       <input type="date" class="form-control" name="dta_abastecimento" id="inputCity">
     </div>
     <div>
-    <button type="submit" name="cadastrar" class="btn btn-outline cadastro1">Cadastrar</button>
+    <button type="submit" name="cadastrar" class="btn btn-outline cadastro">Cadastrar</button>
     </div>
     </form>
 </div>
