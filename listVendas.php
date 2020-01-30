@@ -16,7 +16,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 <h1 class="text-center" style="color:#38B6FF;">Lista de Vendas</h1>
 <table class="table">
-       <thead class="table table-bordered">
+       <thead class="table table-bordered text-center">
         <tr>
             <th>CPF</th>
             <th>Produto</th>
