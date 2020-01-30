@@ -20,7 +20,11 @@ if(isset($_SESSION['login'])){
       <input type="text" name="nome" class="form-control" id="inputName4" placeholder="Nome completo">
     </div>
     <div class="form-group col-md-6">
+<<<<<<< HEAD
     <select class="custom-select form-control" name="categoria" id="inputGroupSelect">
+=======
+    <select name="categoria" class="custom-select form-control" id="inputGroupSelect">
+>>>>>>> origin/victor
     <option selected>Categoria...</option>
     <option>Pacote</option>
     <option>Hospedagem</option>

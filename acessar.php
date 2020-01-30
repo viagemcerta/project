@@ -16,11 +16,11 @@ include("header.php");
 <form action="login.php" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">Login</label>
-    <input placeholder="Digite o usuário..." type="text" class="form-control" name="vendedor" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input placeholder="Digite o usuário..." required type="text" class="form-control" name="vendedor" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Senha</label>
-    <input placeholder="Digite a senha..." type="password" name="senha" class="form-control" id="exampleInputPassword1">
+    <input placeholder="Digite a senha..."  required type="password" name="senha" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="text-center">
   <button type="submit" name="logar" class="btn btn-outline login">Login</button>

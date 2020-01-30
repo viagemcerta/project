@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(isset($_SESSION['login'])){
+  echo ' <script>window.location.href = "painel.php"</script>';
+}
+
+include("connection.php");
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,6 +57,7 @@
 
     </div>
     </div>
+
   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

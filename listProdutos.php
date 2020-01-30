@@ -9,7 +9,7 @@ if(isset($_SESSION['login'])){
     window.location.href = "index.php";
     </script>';
 }
-$querySelect = "select * from produtos"; 
+$querySelect = "select * from produtos where situacao = 'ativo'"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 
@@ -33,7 +33,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
     <tbody>
         
         <?php
-
+    if(!$queryBanco == null){
         while($array = mysqli_fetch_array($queryBanco)){
             $id = $array['id_produto'];
             $nome = $array['nome']; 
@@ -61,7 +61,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
         
 
-
+    }
 
         ?>
     
