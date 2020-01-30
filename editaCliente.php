@@ -4,7 +4,7 @@ $id = $_GET['id'];
 
 include("connection.php"); 
 
-$query = "update addcliente set situacao = 'inativo' where id_cliente = $id";
+$query = "update addcliente "
 
 
 if(mysqli_query($conn, $query)){ 
