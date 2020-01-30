@@ -8,7 +8,8 @@ $query = "update addcliente set situacao = 'inativo' where id_cliente = $id";
 
 
 if(mysqli_query($conn, $query)){ 
-    echo "Delete success! ";
+echo ' <script>window.location.href = "listClientes.php"</script>';
+
 }else{ 
     echo "err";
 }
