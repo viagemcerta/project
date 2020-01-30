@@ -26,10 +26,16 @@ if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){
   $_SESSION['login'] = $login;
   header("refresh:3;url= painel.php");
  
+}else if($login == null || $pass == null) {
+  echo "Usuário ou senha incorretos";
+  echo "<br> Por favor contatar o administrador";
+  header("refresh:3;url= index.php");
+  
 }else{ 
   echo "Usuário ou senha incorretos";
   echo "<br> Por favor contatar o administrador";
   header("refresh:3;url= index.php");
+
 }
 
 // if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
