@@ -19,6 +19,7 @@ $queryArray = mysqli_fetch_array($queryBanco);
 
 if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
   echo "Logado com sucesso"; 
+  $_SESSION['login'] = $login;
   header("refresh:3;url= painel.php");
   
 }else if($login == "adm" && $pass == "adm"){
