@@ -16,7 +16,4 @@ echo ' <script>window.location.href = "listClientes.php"</script>';
 
 
 
-
-
-
 ?>

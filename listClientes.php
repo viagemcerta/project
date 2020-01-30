@@ -54,7 +54,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
 
-                echo '<tr><td>'.$nome.'</td>
+                echo '<tr class="text-center"><td>'.$nome.'</td>
                 <td>'.$email.'</td>
                 <td>'.$dta_nascimento.'</td>
                 <td>'.$cpf.'</td>
@@ -62,8 +62,8 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$destino.'</td>
                 <td>'.$dta_partida.'</td>
                 <td>'.$dta_chegada.'</td>
-                <td class="text-center"><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-primary">Editar</button></a></td>
-                <td class="text-center"><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
+                <td><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
+                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
                 ';
 
             }

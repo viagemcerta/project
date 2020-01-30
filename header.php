@@ -33,13 +33,13 @@ include("login.php");
   
   <img src="img/VIAGEMCERTA.png"  class="img-fluid w-25 p-3 imgsize " alt="">
 
-  <div class="collapse navbar-collapse menucolor" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse menucolor col-sm-9" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
-      <li class="nav-item active ">
+      <li class="nav-item active espaco">
         <a class="nav-link text-light " href="painel.php">Home <span class="sr-only">(current)</span></a>
       </li>
     
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown espaco">
         <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" 
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@ include("login.php");
           <a  class="dropdown-item "  href="formClientes.php">Adicionar Clientes</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown espaco">
         <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" 
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
@@ -55,7 +55,7 @@ include("login.php");
           <a  class="dropdown-item "  href="formProdutos.php">Adicionar Produtos</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown espaco">
         <a class="nav-link dropdown-toggle text-light" href="" id="navbarDropdown" role="button" 
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vendas</a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
@@ -64,10 +64,10 @@ include("login.php");
           <a  class="dropdown-item "  href="listVendasDisponiveis.php">Vendas disponíveis</a>
         </div>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active espaco">
         <a class="nav-link text-light" href="analise.php">Análise<span class="sr-only">(current)</span></a>
       </li> 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown espaco">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
        <?php echo  'Olá '.$_SESSION['login'].' '; ?>

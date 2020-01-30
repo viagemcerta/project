@@ -11,6 +11,9 @@ if(isset($_SESSION['login'])){
 
 ?>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
 <div class="container">
   <div class="titulo">
     <h1 class="text-center" style="text-align:center;">Efetuar Venda</h1>
@@ -20,19 +23,23 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="number" maxlength="11" class="form-control" name="CPF" id="inputCpf" placeholder="000.000.000-00">
+    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-      <input type="text" class="form-control" name="produto" id="inputEmail4">
+      <input type="text" class="form-control" name="produto" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
-    <label for="inputData">Categoria</label>
-    <input type="text" class="form-control" name="categoria" id="inputdata" >
+  <select class="custom-select form-control" id="inputGroupSelect">
+    <option selected>Categoria...</option>
+    <option>Pacote</option>
+    <option>Hospedagem</option>
+    <option>Voo</option>
+    </select>
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">Preço</label>
-    <input type="number" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
+    <input type="" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
@@ -54,6 +61,10 @@ if(isset($_SESSION['login'])){
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
 </div>
+
+<script type="text/javascript">
+            $("#cpf").mask("000.000.000-00");
+</script>
 
 <?php 
 
