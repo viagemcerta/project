@@ -17,10 +17,10 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName4">Produto</label>
-      <input type="text" name="nome" class="form-control" id="inputName4 placeholder="Nome completo"">
+      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="Nome completo">
     </div>
     <div class="form-group col-md-6">
-    <select class="custom-select form-control" id="inputGroupSelect">
+    <select name="categoria" class="custom-select form-control" id="inputGroupSelect">
     <option selected>Categoria...</option>
     <option>Pacote</option>
     <option>Hospedagem</option>
