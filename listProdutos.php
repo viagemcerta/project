@@ -45,15 +45,15 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
             echo '
-            <tr class="text-center">
-            <td>'.$id.'</td>
-            <td>'.$nome.'</td>
-            <td>'.$email.'</td>
-            <td>'.$dta_nascimento.'</td>
-            <td>'.$cpf.'</td>
-            <td>'.$partida.'</td>
-            <td><a href="editaCliente.php?id='.$id.'"><button type="button" class="btn btn-success text-center">Editar</button></a></td>
-            <td><a href="deleteCliente.php?id='.$id.'"><button type="button" class="btn btn-danger">Excluir</button></a></td>
+            <tr>
+            <td scope="col">'.$id.'</td>
+            <td scope="col">'.$nome.'</td>
+            <td scope="col">'.$email.'</td>
+            <td scope="col">'.$dta_nascimento.'</td>
+            <td scope="col">'.$cpf.'</td>
+            <td scope="col">'.$partida.'</td>
+            <td scope="col"><a href="editarProduto.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
+            <td scope="col"><a href="deleteProduto.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td>
             </tr>';
             
 

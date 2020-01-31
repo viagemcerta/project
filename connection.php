@@ -21,7 +21,7 @@ $conn = mysqli_connect("localhost","root","","viagemcerta") or die("Err no banco
 $tabelas = "CREATE TABLE `addcliente` (
     `id_cliente` int(11) NOT NULL AUTO_INCREMENT primary key,
     `nome` varchar(20) DEFAULT NULL,
-    `email` varchar(20) DEFAULT NULL,
+    `email` varchar(50) DEFAULT NULL,
     `CPF` int(20) DEFAULT NULL,
     `dta_nascimento` date DEFAULT NULL,
     `destino` varchar(20) DEFAULT NULL,

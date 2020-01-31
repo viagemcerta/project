@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 if(isset($_POST['addcliente'])){ 
 
 $nome = $_POST['nome'];
@@ -19,9 +19,12 @@ values('$nome','$email','$cpf','$dta_nascimento','$destino','$partida','$dta_par
 
 if(mysqli_query($conn, $query)){ 
     echo ' <script>window.location.href = "formClientes.php"</script>';
-
+    $_SESSION['cadastrado'] = "cadastrado!";
 }else{ 
-    echo "err";
+    echo ' <script>window.location.href = "formClientes.php"</script>';
+ 
+    $_SESSION['cadastrado'] = "Falha ao tentar cadastrar";
+
 }
  
 

@@ -4,7 +4,7 @@ $atualdata = date('yy/m/d');
 
 include("header.php");
 
-$querySelect = "select * from addcliente where dta_partida >= '$atualdata'"; 
+$querySelect = "select * from addcliente where dta_partida >= '$atualdata' and situacao = 'ativo'"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 if(!isset($_SESSION['login'])){ 

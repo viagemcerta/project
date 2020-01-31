@@ -7,6 +7,7 @@ if(isset($_SESSION['login'])){
     echo ' <script>
     window.location.href = "index.php";
     </script>';
+    unset($_SESSION['cadastrado']);
 }
 
 ?>
@@ -52,13 +53,25 @@ if(isset($_SESSION['login'])){
       <label for="inputState">Data de chegada</label>
       <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
-    <button name="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
+    <button name="addcliente"id="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
 </form>
 </div>
+<?php 
+if(isset($_SESSION['cadastrado'])){
 
-<script type="text/javascript">
-            $("#cpf").mask("000.000.000-00");
-</script>
+  echo  '<label class="text-center mx-auto text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
+  unset($_SESSION['cadastrado']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
+
+
+
 
 <?php 
 
