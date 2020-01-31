@@ -52,7 +52,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <td scope="col">'.$dta_nascimento.'</td>
             <td scope="col">'.$cpf.'</td>
             <td scope="col">'.$partida.'</td>
-            <td scope="col"><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
+            <td scope="col"><a href="editarProduto.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
             <td scope="col"><a href="deleteProduto.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td>
             </tr>';
             

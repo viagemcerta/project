@@ -6,7 +6,7 @@ include("connection.php");
 
 session_start();
 
-
+$id = $_POST{'id'};
 $nome = $_POST['nome'];
 $email = $_POST['email']; 
 $cpf = $_POST['CPF']; 
@@ -18,12 +18,14 @@ $dta_chegada = $_POST['dta_chegada'];
 
 
    $query ="update addcliente set nome ='$nome', email = '$email', CPF='$cpf', dta_nascimento = '$dta_nascimento',
-   destino = '$destino', partida = '$partida', dta_partida = '$dta_partida', dta_chegada = '$dta_chegada' ";
+   destino = '$destino', partida = '$partida', dta_partida = '$dta_partida', dta_chegada = '$dta_chegada' where
+   id_cliente = $id";
     if(mysqli_query($conn, $query)){
        echo ' <script>window.location.href = "listClientes.php"</script>';
         $_SESSION['cadastrado'] = "cadastrado!";
     }else{ 
         echo "err";
+        
     }
 
 

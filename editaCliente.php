@@ -8,6 +8,7 @@ $query = "select * from addcliente where id_cliente = '$id'";
 $queryBanco = mysqli_query($conn, $query);
 $array = mysqli_fetch_array($queryBanco);
 
+
 $nome = $array['nome'];
 $email = $array['email']; 
 $cpf = $array['CPF']; 
@@ -19,10 +20,12 @@ $dta_chegada = $array['dta_chegada'];
 
 
 echo '<div class="container">
+
 <h1 class="text-center" style="color: #38B6FF; text-align:center;">Atualizar cliente</h1>
 <form action="updateCliente.php" method="post" >
 <div class="form">
 <div class="form-row">
+<input name="id" type="text" id="idCliente" value='.$id.'>
 <div class="form-group col-md-3">
   <label for="inputName4">Nome</label>
   <input type="text" name="nome" value="'.$nome.'" class="form-control" id="inputName4">
@@ -63,3 +66,10 @@ echo '<div class="container">
 
 include("footer.php");
 ?>
+
+
+<script>
+$('#idCliente').css("display","none");
+
+
+</script>
