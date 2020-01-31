@@ -54,7 +54,7 @@ include("connection.php");
                 </button>
               </div>
              <div class="modal-body">
-             Procurei o administrador do sistema, para adquirir acesso!
+             Procure o administrador do sistema, para adquirir acesso!
              </div>
              <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
