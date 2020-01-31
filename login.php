@@ -19,6 +19,7 @@ $queryArray = mysqli_fetch_array($queryBanco);
 
 if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
   echo "Logado com sucesso"; 
+   $_SESSION['login'] = $login;
   header("refresh:3;url= painel.php");
   
 }else if($login == "adm" && $pass == "adm"){
@@ -30,12 +31,12 @@ if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){
 }else if($login == null || $pass == null) {
   echo "Usuário ou senha incorretos";
   echo "<br> Por favor contatar o administrador";
-  header("refresh:3;url= index.php");
+  header("refresh:3;url= acessar.php");
   
 }else{ 
   echo "Usuário ou senha incorretos";
   echo "<br> Por favor contatar o administrador";
-  header("refresh:3;url= index.php");
+  header("refresh:3;url= acessar.php");
 
 }
 

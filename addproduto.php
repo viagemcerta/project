@@ -14,8 +14,8 @@ if(isset($_POST['cadastrar'])){
     $dta_abastecimento = $_POST["dta_abastecimento"];
 
 
-    $query = "insert into produtos(nome,categoria,valor,qnt_estoque,dta_abastecimento)
-    values ('$nome','$categoria','$valor','$qnt_estoque','$dta_abastecimento')"; 
+    $query = "insert into produtos(nome,categoria,valor,qnt_estoque,dta_abastecimento,situacao)
+    values ('$nome','$categoria','$valor','$qnt_estoque','$dta_abastecimento','ativo')"; 
     
     if(mysqli_query($conn, $query)){ 
         echo "Cadastro ok";

@@ -9,7 +9,7 @@ if(isset($_SESSION['login'])){
     window.location.href = "index.php";
     </script>';
 }
-$querySelect = "select * from produtos"; 
+$querySelect = "select * from produtos where situacao = 'ativo'"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 
@@ -33,7 +33,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
     <tbody>
         
         <?php
-
+    if(!$queryBanco == null){
         while($array = mysqli_fetch_array($queryBanco)){
             $id = $array['id_produto'];
             $nome = $array['nome']; 
@@ -52,12 +52,16 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <td scope="col">'.$dta_nascimento.'</td>
             <td scope="col">'.$cpf.'</td>
             <td scope="col">'.$partida.'</td>
-            <td scope="col"><a href="editaProduto.php?id='.$id.' "><button type="button"  class="btn btn-dark">Editar</button></a></td>
-            <td scope="col"><a href="deleteProduto.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td>
+            <td scope="col"><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Editar</button></a></td>
+            <td scope="col"><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td>
             </tr>';
             
 
         }
+
+        
+
+    }
 
         ?>
     
