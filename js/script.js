@@ -1,6 +1,1 @@
-$(document).ready(function(){
-    function sumir(){
-       // $("body").css("vibilitiy", "hidden");
-        alert("test");
-    }
-  });
+$("#cpf").mask("000.000.000-00");

@@ -4,7 +4,7 @@
 
 include("connection.php"); 
 
-
+session_start();
 
 if(isset($_POST['cadastrar'])){ 
     $nome = $_POST['nome'];
@@ -17,8 +17,9 @@ if(isset($_POST['cadastrar'])){
     $query = "insert into produtos(nome,categoria,valor,qnt_estoque,dta_abastecimento,situacao)
     values ('$nome','$categoria','$valor','$qnt_estoque','$dta_abastecimento','ativo')"; 
     
-    if(mysqli_query($conn, $query)){ 
-        echo "Cadastro ok";
+    if(mysqli_query($conn, $query)){
+        echo ' <script>window.location.href = "formProdutos.php"</script>';
+        $_SESSION['cadastrado'] = "cadastrado!";
     }else{ 
         echo "err";
     }
