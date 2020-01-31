@@ -55,7 +55,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$dta_partida.'</td>
                 <td>'.$dta_chegada.'</td>
                 <td>Editar</td>
-                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-dark">Excluir</button></a></td></tr>';
+                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Excluir</button></a></td></tr>';
                 
 
             }

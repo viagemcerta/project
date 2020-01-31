@@ -41,7 +41,20 @@ include("connection.php");
     <div class="mx-auto w-50 p-3" >
         <img class="rounded mx-auto d-block w-50 p-3" src="img/2.0.png">
        <a href="acessar.php" ><button class="btn w-50 p-2 text-light mx-auto text-uppercase btn-block" style="background-color: #38B6FF;" type="button" >Login</button></a>
-        <p id="p" class="text-center text-link">Ainda não é cadastrado?</p>
+        <p data-toggle="modal" data-target=".bd-example-modal-sm" id="p" class="text-center text-link">Ainda não é cadastrado?</p>
+
+        <div class="modal-body">
+          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          <h5>Sem Login</h5>
+            Procure o adiministrador do sistema para lhe dar permissão.
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+          </div>
+        </div>
+
     </div>
     </div>
 
