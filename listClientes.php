@@ -57,7 +57,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 echo '<tr class="text-center"><td>'.$nome.'</td>
                 <td>'.$email.'</td>
                 <td>'.$dta_nascimento.'</td>
-                <td>'.$cpf.'</td>
+                <td><a href="formVenda.php?CPF='.$cpf.'">'.$cpf.'</td>
                 <td>'.$partida.'</td>
                 <td>'.$destino.'</td>
                 <td>'.$dta_partida.'</td>
