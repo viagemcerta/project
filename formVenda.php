@@ -23,7 +23,7 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
+    <input type="text" minlength="11" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>

@@ -34,7 +34,7 @@ if(isset($_SESSION['login'])){
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00" required>
+    <input type="text" minlength="11" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00" required>
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
