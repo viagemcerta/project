@@ -23,11 +23,11 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
+    <input required type="text" minlength="11" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-      <input type="text" class="form-control" name="produto" id="inputProduto">
+      <input required type="text" class="form-control" name="produto" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
   <select class="custom-select form-control" id="inputGroupSelect">
@@ -39,24 +39,24 @@ if(isset($_SESSION['login'])){
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">Preço</label>
-    <input type="" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
+    <input required type="number" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
       <label for="inputCity">Partida</label>
-      <input type="text" class="form-control" name="partida" id="inputCity">
+      <input required type="text" class="form-control" name="partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Destino</label>
-      <input type="text" class="form-control" name="destino" id="inputCity">
+      <input required type="text" class="form-control" name="destino" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de partida</label>
-      <input type="date" class="form-control" name="dta_partida" id="inputCity">
+      <input required type="date" class="form-control" name="dta_partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de chegada</label>
-      <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
+      <input required type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>

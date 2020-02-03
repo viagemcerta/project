@@ -17,7 +17,7 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName4">Produto</label>
-      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="Nome completo" required>
+      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="produto" required>
     </div>
     <div class="form-group col-md-6">
     <select name="categoria" class="custom-select form-control" id="inputGroupSelect">
