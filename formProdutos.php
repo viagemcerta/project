@@ -17,7 +17,7 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName4">Produto</label>
-      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="Nome completo">
+      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="Nome completo" required>
     </div>
     <div class="form-group col-md-6">
     <select name="categoria" class="custom-select form-control" id="inputGroupSelect">
@@ -29,16 +29,16 @@ if(isset($_SESSION['login'])){
     </div>
   <div class="form-group col-md-6">
     <label for="inputData">Preço</label>
-    <input type="number" class="form-control" name="valor" id="inputdata" placeholder="R$">
+    <input type="number" class="form-control" name="valor" id="inputdata" placeholder="R$" required>
   </div>
   <div class="form-group col-md-6">
     <label for="inputCpf">Quantidade</label>
-    <input type="number" class="form-control" name="qnd_estoque" id="inputCpf">
+    <input type="number" class="form-control" name="qnd_estoque" id="inputCpf" required>
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-6">
       <label for="inputCity">Data de abastecimento</label>
-      <input type="date" class="form-control" name="dta_abastecimento" id="inputCity">
+      <input type="date" class="form-control" name="dta_abastecimento" id="inputCity" required>
     </div>
     <div>
     <button type="submit" name="cadastrar" class="btn btn-outline cadastro">Cadastrar</button>
