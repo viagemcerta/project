@@ -6,6 +6,10 @@ if(isset($_POST['addvenda'])){
 $cpf = $_POST['cpf'];
 $idProduto = $_POST['id'];
 $valor = $_POST['preco'];
+$partida = $_POST['partida'];
+$destino = $_POST['destino'];
+$dta_partida = $_POST['dta_partida'];
+$dta_chegada = $_POST['dta_chegada'];
 $atualdata = date('yy/m/d');
 include("connection.php");
 
@@ -24,8 +28,8 @@ $estoque = $estoque - 1;
 
 include('connection.php');
 
-$query = "insert into vendas(id_cliente,id_produto,valor,dta_venda)
-values('$idCliente', '$idProduto','$valor','$atualdata')";
+$query = "insert into vendas(id_cliente,id_produto,valor,dta_venda,partida,chegada,dta_partida,dta_chegada)
+values('$idCliente', '$idProduto','$valor','$atualdata',$partida,$chegada,$dta_partida,$dta_chegada)";
 
 if(mysqli_query($conn, $query)){ 
     $queryUpdate = "UPDATE produtos set qnt_estoque = $estoque where id_produto = $idProduto";
