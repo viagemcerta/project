@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+
 include('header.php');
 if(isset($_SESSION['login'])){ 
   
@@ -8,28 +8,6 @@ if(isset($_SESSION['login'])){
     window.location.href = "index.php";
     </script>';
 }
-
-if(isset($_GET['id'])){ 
-$id = $_GET['id'];
-$query = "select * from produtos where id_produto = '$id'";
-$queryBanco = mysqli_query($conn, $query);
-
-$queryArray = mysqli_fetch_array($queryBanco);
-
-$nome =  $queryArray['nome'];
-$categoria = $queryArray['categoria'];
-$valor = $queryArray['valor'];
-
-
-}else{ 
-  
-$nome =  "";
-$categoria = "";
-$valor = "";
-
-}
-
-
 
 ?>
 
@@ -44,90 +22,41 @@ $valor = "";
   <div class="form">
   <div class="form-row">
   <div class="form-group col-md-3">
-    <select  class="custom-select form-control" id="inputGroupSelect">
-      <?php 
-      $queryCliente = "select * from addcliente order by nome asc";
-      $clienteBanco = mysqli_query($conn, $queryCliente);
-      while($clienteArray = mysqli_fetch_array($clienteBanco)){ 
-        $clienteNome = $clienteArray['nome'];
-        $cpf = $clienteArray['CPF'];
-        
-        echo '<option>'.$clienteNome.'</option>';
-      }
-
-      
-      
-      ?>
-    </select>
+    <label for="inputCpf">CPF</label>
+    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
-
-  <!-- usei esse input só pra enviar o cpf como post -->
-  <input style="display:none" name="cpf" value="<?php echo $cpf;  ?>" type="text">
-<!-- ################################### -->
- <!-- usei esse input só pra enviar o id como post -->
- <input style="display:none" name="id" value="<?php echo $id;  ?>" type="text">
-<!-- ################################### -->
-
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-<<<<<<< HEAD
-      <input required type="text" class="form-control" name="produto" id="inputProduto">
-=======
-      <input type="text" class="form-control" name="produto" value="<?php echo $nome; ?>" id="inputProduto">
->>>>>>> origin/victor
+      <input type="text" class="form-control" name="produto" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
-  <select  class="custom-select form-control" id="inputGroupSelect">
-    <?php
-    if($categoria == "Hospedagem"){
-    echo '<option>Categoria...</option>
-    <option >Pacote</option>
-    <option selected>Hospedagem</option>
-    <option>Voo</option>';
-    }else if($categoria == "Pacote"){ 
-      echo '<option>Categoria...</option>
-    <option selected>Pacote</option>
+  <select class="custom-select form-control" id="inputGroupSelect">
+    <option selected>Categoria...</option>
+    <option>Pacote</option>
     <option>Hospedagem</option>
-    <option>Voo</option>';
-    }else if($categoria == "Voo"){ 
-      echo '<option>Categoria...</option>
-    <option >Pacote</option>
-    <option>Hospedagem</option>
-    <option selected>Voo</option>';
-    }else{ 
-      echo '<option selected>Categoria...</option>
-    <option >Pacote</option>
-    <option>Hospedagem</option>
-    <option>Voo</option>';
-
-    }
-    ?>
+    <option>Voo</option>
     </select>
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">Preço</label>
-<<<<<<< HEAD
-    <input required type="number" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
-=======
-    <input type="" maxlength="11" value="<?php echo $valor; ?>" class="form-control" name="preco" id="inputCpf" placeholder="R$">
->>>>>>> origin/victor
+    <input type="" maxlength="11" class="form-control" name="preço" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
       <label for="inputCity">Partida</label>
-      <input required type="text" class="form-control" name="partida" id="inputCity">
+      <input type="text" class="form-control" name="partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Destino</label>
-      <input required type="text" class="form-control" name="destino" id="inputCity">
+      <input type="text" class="form-control" name="destino" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de partida</label>
-      <input required type="date" class="form-control" name="dta_partida" id="inputCity">
+      <input type="date" class="form-control" name="dta_partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de chegada</label>
-      <input required type="date" class="form-control" name="dta_chegada"  id="inputCity">
+      <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
