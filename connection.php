@@ -24,10 +24,6 @@ $tabelas = "CREATE TABLE `addcliente` (
     `email` varchar(50) DEFAULT NULL,
     `CPF` int(20) DEFAULT NULL,
     `dta_nascimento` date DEFAULT NULL,
-    `destino` varchar(20) DEFAULT NULL,
-    `partida` varchar(20) DEFAULT NULL,
-    `dta_partida` date DEFAULT NULL,
-    `dta_chegada` date DEFAULT NULL,
     `situacao` varchar(50) NOT NULL	
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
@@ -60,6 +56,10 @@ $tabelas3 =  'CREATE TABLE `login` (
     `id_cliente` int(11) DEFAULT NULL,
     `id_produto` int(4) DEFAULT NULL,
     `valor` int(50) DEFAULT NULL,
+    `destino` varchar(20) DEFAULT NULL,
+    `partida` varchar(20) DEFAULT NULL,
+    `dta_partida` date DEFAULT NULL,
+    `dta_chegada` date DEFAULT NULL,
     `dta_venda` date DEFAULT NULL,
     FOREIGN KEY (`id_cliente`) REFERENCES `addcliente` (`id_cliente`),
     FOREIGN KEY (`id_produto`) REFERENCES `produtos` (`id_produto`)

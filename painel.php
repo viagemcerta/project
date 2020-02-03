@@ -48,7 +48,7 @@ if(!isset($_SESSION['login'])){
         
             <?php
 
-            
+            if($queryBanco = mysqli_query($conn, $querySelect)){
             for($x = 0; $x < 5; $x++){
             if($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_cliente'];
@@ -78,7 +78,9 @@ if(!isset($_SESSION['login'])){
             }
 
             
-
+        }else{
+            
+        }
 
 
             ?>

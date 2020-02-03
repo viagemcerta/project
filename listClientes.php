@@ -29,10 +29,6 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <th>Email</th>
             <th>Data de Nascimento</th>
             <th>CPF</th>
-            <th>Partida</th>
-            <th>Destino</th>
-            <th>Data da partida</th>
-            <th>Data da chegada</th>
             <th>Editar</th>
             <th>Excluir</th>
         </tr>
@@ -47,10 +43,6 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 $email = $array['email']; 
                 $dta_nascimento = $array['dta_nascimento']; 
                 $cpf = $array['CPF']; 
-                $partida = $array['partida']; 
-                $destino = $array['destino']; 
-                $dta_partida = $array['dta_partida']; 
-                $dta_chegada = $array['dta_chegada']; 
 
 
 
@@ -58,10 +50,6 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$email.'</td>
                 <td>'.$dta_nascimento.'</td>
                 <td><a href="formVenda.php?CPF='.$cpf.'">'.$cpf.'</td>
-                <td>'.$partida.'</td>
-                <td>'.$destino.'</td>
-                <td>'.$dta_partida.'</td>
-                <td>'.$dta_chegada.'</td>
                 <td><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
                 <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
                 ';
