@@ -22,19 +22,19 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="inputName4">Nome</label>
-      <input type="text" name="nome" class="form-control" id="inputName4">
+      <input type="text" name="nome" class="form-control" id="inputName4" required>
     </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">E-mail</label>
-      <input type="text" class="form-control" name="email" id="inputEmail4">
+      <input type="text" class="form-control" name="email" id="inputEmail4" required>
     </div>
   <div class="form-group col-md-3">
     <label for="inputData">Data de nascimento</label>
-    <input type="date" class="form-control" name="dta_nascimento" id="inputdata" placeholder="00/00/0000">
+    <input type="date" class="form-control" name="dta_nascimento" id="inputdata" placeholder="00/00/0000" required>
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>
-    <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
+    <input type="text" minlength="11" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00" required>
   </div>
     <button name="addcliente"id="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
 </form>

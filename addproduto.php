@@ -10,7 +10,7 @@ if(isset($_POST['cadastrar'])){
     $nome = $_POST['nome'];
     $categoria = $_POST['categoria'];
     $valor = $_POST['valor'];
-    $qnt_estoque = $_POST['qnd_estoque'];
+    $qnt_estoque = $_POST['qnt_estoque'];
     $dta_abastecimento = $_POST["dta_abastecimento"];
 
 
@@ -26,19 +26,7 @@ if(isset($_POST['cadastrar'])){
 
 
 
-
-
-
-
-
-
-
 }
-
-
-
-
-
 
 
 ?>

@@ -16,7 +16,6 @@ $dta_nascimento = $array['dta_nascimento'];
 
 
 echo '<div class="container">
-
 <h1 class="text-center" style="color: #38B6FF; text-align:center;">Atualizar cliente</h1>
 <form action="updateCliente.php" method="post" >
 <div class="form">

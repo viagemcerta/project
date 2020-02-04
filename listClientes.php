@@ -50,6 +50,13 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$email.'</td>
                 <td>'.$dta_nascimento.'</td>
                 <td><a href="formVenda.php?CPF='.$cpf.'">'.$cpf.'</td>
+<<<<<<< HEAD
+                <td>'.$partida.'</td>
+                <td>'.$destino.'</td>
+                <td>'.$dta_partida.'</td>
+                <td>'.$dta_chegada.'</td>
+=======
+>>>>>>> victor
                 <td><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
                 <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
                 ';
