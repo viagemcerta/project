@@ -17,7 +17,7 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName4">Produto</label>
-      <input type="text" name="nome" class="form-control" id="inputName4" placeholder="produto" required>
+      <input type="text" name="nomeProduto" class="form-control" id="inputName4" placeholder="produto" required>
     </div>
     <div class="form-group col-md-6">
     <select required name="categoria" class="custom-select form-control" id="inputGroupSelect">
@@ -33,7 +33,7 @@ if(isset($_SESSION['login'])){
   </div>
   <div class="form-group col-md-6">
     <label for="inputCpf">Quantidade</label>
-    <input type="number" class="form-control" name="qnd_estoque" id="inputCpf" required>
+    <input type="number" class="form-control" name="qnt_estoque" id="inputCpf" required>
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-6">

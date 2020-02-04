@@ -9,7 +9,7 @@ if(isset($_SESSION['login'])){
     </script>';
 }
 
-$querySelect = "select * from vendas"; 
+$querySelect = "select * from vendas V, produtos P, addcliente A"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>
@@ -35,10 +35,11 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <?php
 
             while($array = mysqli_fetch_array($queryBanco)){
-                $cpf = $array['cpf'];
-                $produto = $array['produto']; 
+                $cpf = $array['CPF'];
+                $produto = $array['nome
+                ']; 
                 $categoria = $array['categoria']; 
-                $preço = $array['preço'];  
+                $preço = $array['valor'];  
                 $destino = $array['destino'];
                 $partida = $array['partida']; 
                 $dta_partida = $array['dta_partida']; 
@@ -55,7 +56,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$dta_partida.'</td>
                 <td>'.$dta_chegada.'</td>
                 <td>Editar</td>
-                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Excluir</button></a></td></tr>';
+                <td><a href="deleteCliente.php "><button type="button"  class="btn btn-success">Excluir</button></a></td></tr>';
                 
 
             }

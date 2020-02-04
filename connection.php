@@ -22,7 +22,7 @@ $tabelas = "CREATE TABLE `addcliente` (
     `id_cliente` int(11) NOT NULL AUTO_INCREMENT primary key,
     `nome` varchar(20) DEFAULT NULL,
     `email` varchar(50) DEFAULT NULL,
-    `CPF` int(20) DEFAULT NULL,
+    `CPF` varchar(100) DEFAULT NULL,
     `dta_nascimento` date DEFAULT NULL,
     `situacao` varchar(50) NOT NULL	
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
@@ -43,7 +43,7 @@ $tabelas3 =  'CREATE TABLE `login` (
 
   $tabelas4 = 'CREATE TABLE `produtos` (
     `id_produto` int(4) NOT NULL AUTO_INCREMENT primary key,
-    `nome` varchar(50) DEFAULT NULL,
+    `nomeProduto` varchar(50) DEFAULT NULL,
     `categoria` varchar(20) DEFAULT NULL,
     `valor` int(50) DEFAULT NULL,
     `qnt_estoque` int(200) DEFAULT NULL,

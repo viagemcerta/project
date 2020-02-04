@@ -7,7 +7,7 @@ include("connection.php");
 session_start();
 
 if(isset($_POST['cadastrar'])){ 
-    $nome = $_POST['nome'];
+    $nome = $_POST['nomeProduto'];
     $categoria = $_POST['categoria'];
     $err = 0;
     if($categoria == "Categoria..."){ 
@@ -20,7 +20,7 @@ if(isset($_POST['cadastrar'])){
     $dta_abastecimento = $_POST["dta_abastecimento"];
 
 
-    $query = "insert into produtos(nome,categoria,valor,qnt_estoque,dta_abastecimento,situacao)
+    $query = "insert into produtos(nomeProduto,categoria,valor,qnt_estoque,dta_abastecimento,situacao)
     values ('$nome','$categoria','$valor','$qnt_estoque','$dta_abastecimento','ativo')"; 
     
     if($err == 0){

@@ -35,7 +35,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
     if(!$queryBanco == null){
         while($array = mysqli_fetch_array($queryBanco)){
             $id = $array['id_produto'];
-            $nome = $array['nome']; 
+            $nome = $array['nomeProduto']; 
             $email = $array['categoria']; 
             $dta_nascimento = $array['valor']; 
             $estoque = $array['qnt_estoque'];
