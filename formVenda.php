@@ -70,7 +70,7 @@ $valor = "";
 
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-      <input type="text" class="form-control" name="nomeProduto" value="<?php echo $nome; ?>" id="inputProduto">
+      <input required type="text" class="form-control" name="nomeProduto" value="<?php echo $nome; ?>" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
   <select  class="custom-select form-control" id="inputGroupSelect">
@@ -102,24 +102,24 @@ $valor = "";
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">Preço</label>
-    <input type="" maxlength="11" value="<?php echo $valor; ?>" class="form-control" name="preco" id="inputCpf" placeholder="R$">
+    <input required type="" maxlength="11" value="<?php echo $valor; ?>" class="form-control" name="preco" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
       <label for="inputCity">Partida</label>
-      <input type="text" class="form-control" name="partida" id="inputCity">
+      <input required type="text" class="form-control" name="partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Destino</label>
-      <input type="text" class="form-control" name="destino" id="inputCity">
+      <input required type="text" class="form-control" name="destino" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de partida</label>
-      <input type="date" class="form-control" name="dta_partida" id="inputCity">
+      <input required type="date" class="form-control" name="dta_partida" id="inputCity">
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de chegada</label>
-      <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
+      <input required type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
