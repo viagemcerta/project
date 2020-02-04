@@ -76,7 +76,7 @@ $valor = "";
   <select  class="custom-select form-control" id="inputGroupSelect">
     <?php
     if($categoria == "Hospedagem"){
-    echo '<label>categoria</label>
+    echo '
     <option>Categoria...</option>
     <option >Pacote</option>
     <option selected>Hospedagem</option>
