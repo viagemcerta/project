@@ -70,13 +70,14 @@ $valor = "";
 
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-      <input type="text" class="form-control" name="produto" value="<?php echo $nome; ?>" id="inputProduto">
+      <input disabled type="text" class="form-control" name="produto" value="<?php echo $nome; ?>" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
   <select  class="custom-select form-control" id="inputGroupSelect">
     <?php
     if($categoria == "Hospedagem"){
-    echo '<option>Categoria...</option>
+    echo '<label>categoria</label>
+    <option>Categoria...</option>
     <option >Pacote</option>
     <option selected>Hospedagem</option>
     <option>Voo</option>';
@@ -102,7 +103,7 @@ $valor = "";
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">Preço</label>
-    <input type="" maxlength="11" value="<?php echo $valor; ?>" class="form-control" name="preco" id="inputCpf" placeholder="R$">
+    <input disabled type="number" value="<?php echo $valor; ?>" class="form-control" name="preco" id="inputCpf" placeholder="R$">
   </div>
   <div class="form-row w-100">
     <div class="form-group col-md-3">
