@@ -22,6 +22,8 @@ include("login.php");
     <title>VIAGEM CERTA</title>
   </head>
   <body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light menucolor">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
