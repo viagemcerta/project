@@ -29,9 +29,10 @@ $tabelas = "CREATE TABLE `addcliente` (
 
   $tabelas2 = "CREATE TABLE `cadastro` (
     `id_cadastro` int(11) NOT NULL AUTO_INCREMENT primary key,
-    `vendedor` varchar(20) DEFAULT NULL,
-    `senha` varchar(20) DEFAULT NULL,
+    `login` varchar(20) DEFAULT NULL,
+    `nome` varchar(20) DEFAULT NULL,
     `email` varchar(20) DEFAULT NULL,
+    `senha` varchar(20) DEFAULT NULL,
     `cargo` varchar(20) DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
