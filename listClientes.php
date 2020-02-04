@@ -55,11 +55,6 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 ';
 
             }
-
-            
-
-
-
             ?>
         
     </tbody>

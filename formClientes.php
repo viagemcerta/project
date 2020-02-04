@@ -36,23 +36,6 @@ if(isset($_SESSION['login'])){
     <label for="inputCpf">CPF</label>
     <input type="text" maxlength="11" class="form-control" name="CPF" id="cpf" placeholder="000.000.000-00">
   </div>
-  <div class="form-row w-100">
-    <div class="form-group col-md-3">
-      <label for="inputCity">Partida</label>
-      <input type="text" class="form-control" name="partida" id="inputCity">
-    </div>
-    <div class="form-group col-md-3">
-      <label for="inputState">Destino</label>
-      <input type="text" class="form-control" name="destino" id="inputCity">
-    </div>
-    <div class="form-group col-md-3">
-      <label for="inputState">Data de partida</label>
-      <input type="date" class="form-control" name="dta_partida" id="inputCity">
-    </div>
-    <div class="form-group col-md-3">
-      <label for="inputState">Data de chegada</label>
-      <input type="date" class="form-control" name="dta_chegada"  id="inputCity">
-    </div>
     <button name="addcliente"id="addcliente" type="submit" class="btn btn-outline cadastro">Cadastrar</button>
 </form>
 </div>
