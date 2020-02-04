@@ -9,7 +9,7 @@ $query = "select * from produtos where id_produto = '$id'";
 $queryBanco = mysqli_query($conn, $query);
 $array = mysqli_fetch_array($queryBanco);
 
-$nome = $array['nome'];
+$nome = $array['nomeProduto'];
 $categoria = $array['categoria'];
 $valor = $array['valor'];
 $qnt_estoque = $array['qnt_estoque'];
@@ -24,15 +24,35 @@ echo '<div class="container">
 <input name="id" type="text" id="idCliente" value='.$id.'>
 <div class="form-group col-md-6">
   <label for="inputName4">Produto</label>
-  <input type="text" value="'.$nome.'" name="nome" class="form-control" id="inputName4" placeholder="Nome completo">
+  <input type="text" value="'.$nome.'" name="nomeProduto" class="form-control" id="inputName4" placeholder="Nome completo">
 </div>
 <div class="form-group col-md-6">
-<select value="'.$categoria.'"name="categoria" class="custom-select form-control" id="inputGroupSelect">
-<option selected>Categoria...</option>
-<option>Pacote</option>
+<select value="'.$categoria.'"name="categoria" class="custom-select form-control" id="inputGroupSelect">';
+
+if($categoria == "Hospedagem"){
+echo '<option>Categoria...</option>
+<option >Pacote</option>
+<option selected>Hospedagem</option>
+<option>Voo</option>';
+}else if($categoria == "Pacote"){ 
+  echo '<option>Categoria...</option>
+<option selected>Pacote</option>
 <option>Hospedagem</option>
-<option>Voo</option>
-</select>
+<option>Voo</option>';
+}else if($categoria == "Voo"){ 
+  echo '<option>Categoria...</option>
+<option >Pacote</option>
+<option>Hospedagem</option>
+<option selected>Voo</option>';
+}else{ 
+  echo '<option selected>Categoria...</option>
+<option >Pacote</option>
+<option>Hospedagem</option>
+<option>Voo</option>';
+
+}
+
+echo '</select>
 </div>
 <div class="form-group col-md-6">
 <label for="inputData">Preço</label>
@@ -40,7 +60,7 @@ echo '<div class="container">
 </div>
 <div class="form-group col-md-6">
 <label for="inputCpf">Quantidade</label>
-<input value="'.$qnt_estoque.'"type="number" class="form-control" name="qnd_estoque" id="inputCpf">
+<input value="'.$qnt_estoque.'"type="number" class="form-control" name="qnt_estoque" id="inputCpf">
 </div>
 <div class="form-row w-100">
 <div class="form-group col-md-6">

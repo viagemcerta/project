@@ -43,7 +43,7 @@ $tabelas3 =  'CREATE TABLE `login` (
 
   $tabelas4 = 'CREATE TABLE `produtos` (
     `id_produto` int(4) NOT NULL AUTO_INCREMENT primary key,
-    `nome` varchar(50) DEFAULT NULL,
+    `nomeProduto` varchar(50) DEFAULT NULL,
     `categoria` varchar(20) DEFAULT NULL,
     `valor` int(50) DEFAULT NULL,
     `qnt_estoque` int(200) DEFAULT NULL,

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 if(isset($_POST['addvenda'])){ 
 
@@ -28,16 +28,20 @@ $estoque = $estoque - 1;
 
 include('connection.php');
 
-$query = "insert into vendas(id_cliente,id_produto,valor,dta_venda,partida,chegada,dta_partida,dta_chegada)
-values('$idCliente', '$idProduto','$valor','$atualdata',$partida,$chegada,$dta_partida,$dta_chegada)";
+$query = "insert into vendas(id_cliente,id_produto,valor,dta_venda,partida,destino,dta_partida,dta_chegada)
+values('$idCliente', '$idProduto','$valor','$atualdata','$partida','$destino','$dta_partida','$dta_chegada')";
 
 if(mysqli_query($conn, $query)){ 
     $queryUpdate = "UPDATE produtos set qnt_estoque = $estoque where id_produto = $idProduto";
     $produtoBancoUpdate = mysqli_query($conn, $queryUpdate);
-    echo "venda cadastrada"; 
+    echo ' <script>window.location.href = "formVenda.php"</script>';
+    $_SESSION['cadastrado'] = "cadastrado!";
+
 
 }else{ 
-    echo "err";
+    echo ' <script>window.location.href = "formVenda.php"</script>';
+ 
+    $_SESSION['cadastrado'] = "Falha ao tentar cadastrar";
 }
 
 

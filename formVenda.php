@@ -16,7 +16,7 @@ $queryBanco = mysqli_query($conn, $query);
 
 $queryArray = mysqli_fetch_array($queryBanco);
 
-$nome =  $queryArray['nome'];
+$nome =  $queryArray['nomeProduto'];
 $categoria = $queryArray['categoria'];
 $valor = $queryArray['valor'];
 
@@ -44,7 +44,7 @@ $valor = "";
   <div class="form">
   <div class="form-row">
   <div class="form-group col-md-3">
-    <select  class="custom-select form-control" id="inputGroupSelect">
+    <select  class="custom-select form-control text-uppercase" id="inputGroupSelect">
       <?php 
       $queryCliente = "select * from addcliente order by nome asc";
       $clienteBanco = mysqli_query($conn, $queryCliente);
@@ -52,7 +52,7 @@ $valor = "";
         $clienteNome = $clienteArray['nome'];
         $cpf = $clienteArray['CPF'];
         
-        echo '<option>'.$clienteNome.'</option>';
+        echo '<option class="text-uppercase" >'.$clienteNome.'</option>';
       }
 
       
@@ -70,7 +70,7 @@ $valor = "";
 
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">Produto</label>
-      <input type="text" class="form-control" name="produto" value="<?php echo $nome; ?>" id="inputProduto">
+      <input type="text" class="form-control" name="nomeProduto" value="<?php echo $nome; ?>" id="inputProduto">
     </div>
   <div class="form-group col-md-3">
   <select  class="custom-select form-control" id="inputGroupSelect">
@@ -124,6 +124,21 @@ $valor = "";
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
 </div>
+<?php 
+if(isset($_SESSION['cadastrado'])){
+
+  echo  '<label class="text-center mx-auto text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
+  unset($_SESSION['cadastrado']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
+
+
 
 <script type="text/javascript">
             $("#cpf").mask("000.000.000-00");

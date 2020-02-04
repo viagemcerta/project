@@ -36,7 +36,7 @@ include("login.php");
   <img src="img/VIAGEMCERTA.png"  class="img-fluid w-25 p-3 imgsize " alt="">
 
   <div class="collapse navbar-collapse menucolor col-sm-9" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto">
+    <ul class="text-uppercase w-100 navbar-nav mx-auto">
       <li class="nav-item active espaco">
         <a class="nav-link text-light " href="painel.php">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -81,6 +81,7 @@ include("login.php");
     </ul>
   </div>
 </nav>
+<p></p>
 
 <!--
   <div class="menu">

@@ -35,7 +35,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
     if(!$queryBanco == null){
         while($array = mysqli_fetch_array($queryBanco)){
             $id = $array['id_produto'];
-            $nome = $array['nome']; 
+            $nome = $array['nomeProduto']; 
             $email = $array['categoria']; 
             $dta_nascimento = $array['valor']; 
             $estoque = $array['qnt_estoque'];
@@ -43,12 +43,12 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
             echo '
-            <tr>
+            <tr class="text-center">
             <td scope="col">'.$id.'</td>
             <td scope="col">'.$nome.'</td>
             <td scope="col">'.$email.'</td>
             <td scope="col">'.$dta_nascimento.'</td>
-            <td class="text-center" scope="col">'.$estoque.'</td>
+            <td scope="col">'.$estoque.'</td>
             <td><a href="formVenda.php?id='.$id.' "><button type="button"  class="btn btn-success">Adicionar ao Cliente</button></a></td></tr>
 
      </tr>';
