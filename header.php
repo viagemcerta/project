@@ -67,7 +67,51 @@ include("login.php");
         </div>
       </li>
       <li class="nav-item active espaco">
-        <a class="nav-link text-light" href="analise.php">Análise<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" data-toggle="modal" data-target="#exampleModalCenter" href="analise.php">Cadastrar Funcionário<span class="sr-only">(current)</span></a>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+             <h5 class="modal-title text-center" id="exampleModalCenterTitle">Cadastro de Funcionário</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+            </div>
+           <div class="modal-body">
+
+            <form>
+            <div class="form-row">
+              <div class="col-md-6 mb-4">
+                <label for="validationDefault01">Login</label>
+                <input type="text" class="form-control" id="validationDefault01" required>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="validationDefault02">Nome</label>
+                <input type="text" class="form-control" id="validationDefault02" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault03">E-mail</label>
+                <input type="text" class="form-control" id="validationDefault03" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault04">Senha</label>
+                <input type="password" class="form-control" id="validationDefault04"  required>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationDefault05">Cargo</label>
+                <input type="text" class="form-control" id="validationDefault05" required>
+              </div>
+              </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+             <button type="button" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
       </li> 
       <li class="nav-item dropdown espaco">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 
