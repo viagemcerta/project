@@ -26,7 +26,7 @@ if(isset($_SESSION['login'])){
     </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">E-mail</label>
-      <input type="text" class="form-control" name="email" id="inputEmail4" required>
+      <input type="email" class="form-control" name="email" id="inputEmail4" required>
     </div>
   <div class="form-group col-md-3">
     <label for="inputData">Data de nascimento</label>
