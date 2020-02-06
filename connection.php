@@ -66,11 +66,23 @@ $tabelas3 =  'CREATE TABLE `login` (
     FOREIGN KEY (`id_produto`) REFERENCES `produtos` (`id_produto`)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
 
+$tabelas6 = 'CREATE TABLE `funcionario` (
+  `id_funcionario` int(4) NOT NULL AUTO_INCREMENT primary key,
+  `login` varchar(15) DEFAULT NULL,
+  `nomeFuncionario` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `senha` varchar(50) DEFAULT NULL,
+  `cargo` varchar(50) DEFAULT NULL,
+  `godPass` varchar(50) DEFAULT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
+
     mysqli_query($conn, $tabelas);
     mysqli_query($conn, $tabelas2);
     mysqli_query($conn, $tabelas3);
     mysqli_query($conn, $tabelas4);
     mysqli_query($conn, $tabelas5);
+    mysqli_query($conn, $tabelas6);
 
   
     

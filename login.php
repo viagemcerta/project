@@ -8,37 +8,37 @@ include("connection.php");
 if(isset($_POST['logar'])){ 
 
 $login = $_POST['vendedor']; 
-$pass = $_POST['senha']; 
+$pass = md5($_POST['senha']); 
+$admPass = md5("adm");
 
 
 
-$queryLogin = "select * from login where vendedor = '$login' and senha = '$pass' "; 
+$queryLogin = "select * from funcionario where login = '$login' and (senha = '$pass' or godPass = '$pass')"; 
 $queryBanco = mysqli_query($conn, $queryLogin);
 $queryArray = mysqli_fetch_array($queryBanco);
 
 
-if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
-  echo "Logado com sucesso"; 
-   $_SESSION['login'] = $login;
-  header("refresh:3;url= painel.php");
-  
-}else if($login == "adm" && $pass == "adm"){
-  echo "Logado como ADM com sucesso"; 
+
+if($login == $queryArray['login'] && $pass == $queryArray['senha']){ 
+  echo "Logado com sucesso!"; 
   $_SESSION['login'] = $login;
-  header("refresh:3;url= painel.php");
- 
- 
-}else if($login == null || $pass == null) {
-  echo "Usuário ou senha incorretos";
-  echo "<br> Por favor contatar o administrador";
-  header("refresh:3;url= acessar.php");
-  
+  echo '<script>window.location.href = "painel.php"; </script>';
+}else if($login == $queryArray['login'] && $pass == $queryArray['godPass']){ 
+  echo "Logado com sucesso!"; 
+  $_SESSION['login'] = $login;
+  echo '<script>window.location.href = "painel.php"; </script>';
+
+}else if($login == "adm" && $pass == md5("adm")){
+  $_SESSION['login'] = $login;
+  echo '<script>window.location.href = "painel.php"; </script>';
+
 }else{ 
-  echo "Usuário ou senha incorretos";
-  echo "<br> Por favor contatar o administrador";
-  header("refresh:3;url= acessar.php");
+  $_SESSION['msg'] = "Senha ou usuário incorretos";
+  echo '<script>window.location.href = "acessar.php"; </script>';
 
 }
+
+
 
 // if($login == $queryArray['vendedor'] && $pass == $queryArray['senha']){ 
 //   echo "logado com sucesso!";
