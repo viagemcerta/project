@@ -4,6 +4,13 @@ include("connection.php");
 include("login.php");
 //utilizei para mostrar para o professor de startup
 //$_SESSION['login'] = "testeProfessor";
+if(isset($_SESSION['login'])){
+$login = $_SESSION['login'];
+$query = "select * from funcionario where login ='$login'";
+$queryBanco = mysqli_query($conn, $query);
+$array = mysqli_fetch_array($queryBanco);
+$modoAdm = $array['admFunc'];
+}
 
 
 
@@ -69,7 +76,7 @@ include("login.php");
       <?php 
       
       
-      if($_SESSION['login'] == "adm"){
+      if($modoAdm == 1 || $_SESSION['login'] == "adm"){
       echo '
       <li class="nav-item active espaco">
         <a class="nav-link text-light" data-toggle="modal" data-target="#exampleModalCenter" href="analise.php">Cadastrar Funcionário<span class="sr-only">(current)</span></a>
@@ -126,7 +133,11 @@ include("login.php");
        <?php echo  'Olá '.$_SESSION['login'].' '; ?>
         </a>
         <div class="dropdown-menu onlyblack" aria-labelledby="navbarDropdown">
-          <a  class="dropdown-item "  href="adm.php">adm</a>
+          <?php
+          if($modoAdm == 1 || $_SESSION['login'] == "adm"){ 
+          echo '<a  class="dropdown-item "  href="adm.php">adm</a>';
+          }
+          ?>
           <a  class="dropdown-item "  href="logout.php">Sair</a>
         </div>
         

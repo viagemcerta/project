@@ -31,6 +31,7 @@ if($login == $queryArray['login'] && $pass == $queryArray['senha']){
 }else if($login == "adm" && $pass == md5("adm")){
   $_SESSION['login'] = $login;
   echo '<script>window.location.href = "painel.php"; </script>';
+  
 
 }else{ 
   $_SESSION['msg'] = "Senha ou usuário incorretos";

@@ -24,6 +24,19 @@ $queryBanco = mysqli_query($conn, $querySelect);
 ?>
 
 <h1 class="text-center" style="color:#38B6FF;">Lista de Funcionários</h1>
+<?php 
+if(isset($_SESSION['msg'])){
+
+  echo  '<div class="container text-center"><label class="text-center text-uppercase text-success" >'.$_SESSION['msg'].'</label></div>'; 
+  unset($_SESSION['msg']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
 <table class="table">
        <thead class="table table-bordered text-center">
         <tr>
@@ -33,6 +46,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <th>Cargo</th>
             <th>Editar</th>
             <th>Excluir</th>
+            <th>ADM</th>
         </tr>
         </thead>
     <tbody>
@@ -53,7 +67,9 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$cpf.'</td>
                 <td>'.$dta_nascimento.'</td>
                 <td><a href="editarAdm.php?id='.$id.' "><button type="button" class="btn btn-success">Editar</button></a></td>
-                <td><a href="deleteFuncionario.php?id='.$id.'"><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
+                <td><a href="deleteFuncionario.php?id='.$id.'"><button type="button"  class="btn btn-danger">Excluir</button></a></td>
+                <td><a href="mudarFuncionario.php?id='.$id.'"><button type="button"  class="btn btn-primary">Liberar/bloquear</button></a></td></tr>
+
                 ';
 
             }
