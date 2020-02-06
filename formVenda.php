@@ -125,6 +125,21 @@ $valor = "";
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
 </form>
 </div>
+<?php 
+if(isset($_SESSION['cadastrado'])){
+
+  echo  '<label class="text-center mx-auto text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
+  unset($_SESSION['cadastrado']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
+
+
 
 <script type="text/javascript">
             $("#cpf").mask("000.000.000-00");
