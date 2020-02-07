@@ -4,7 +4,7 @@ $atualdata = date('yy/m/d');
 
 include("header.php");
 
-$querySelect = "select * from addcliente where dta_partida >= '$atualdata' and situacao = 'ativo'"; 
+$querySelect = "select * from addcliente where situacao = 'ativo' and dataCadastro >= '$atualdata' "; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 if(!isset($_SESSION['login'])){ 
@@ -27,10 +27,6 @@ if(!isset($_SESSION['login'])){
 
     </section>
     <body class=" text-center">
-    
-<p class="mt-5">Ultimos cinco clientes cadastrados</p>
-    
-    
     </body>
 
     <table class="table">
@@ -52,14 +48,20 @@ if(!isset($_SESSION['login'])){
             for($x = 0; $x < 5; $x++){
             if($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_cliente'];
+                $queryVenda = "select * from vendas where id_cliente = '$id' and dta_partida >= '$atualdata' ";
+                $bancoVenda = mysqli_query($conn, $queryVenda);
+                $arrayVenda = mysqli_fetch_array($bancoVenda);
+
+
+                
                 $nome = $array['nome']; 
                 $email = $array['email']; 
                 $dta_nascimento = $array['dta_nascimento']; 
                 $cpf = $array['CPF']; 
-                $partida = $array['partida']; 
-                $destino = $array['destino']; 
-                $dta_partida = $array['dta_partida']; 
-                $dta_chegada = $array['dta_chegada']; 
+                $partida = $arrayVenda['partida']; 
+                $destino = $arrayVenda['destino']; 
+                $dta_partida = $arrayVenda['dta_partida']; 
+                $dta_chegada = $arrayVenda['dta_chegada']; 
 
 
 

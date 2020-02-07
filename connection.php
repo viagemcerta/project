@@ -24,7 +24,8 @@ $tabelas = "CREATE TABLE `addcliente` (
     `email` varchar(50) DEFAULT NULL,
     `CPF` varchar(100) DEFAULT NULL,
     `dta_nascimento` date DEFAULT NULL,
-    `situacao` varchar(50) NOT NULL	
+    `situacao` varchar(50) NOT NULL,
+    `dataCadastro` date DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
   $tabelas2 = "CREATE TABLE `cadastro` (
@@ -66,11 +67,25 @@ $tabelas3 =  'CREATE TABLE `login` (
     FOREIGN KEY (`id_produto`) REFERENCES `produtos` (`id_produto`)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
 
+$tabelas6 = 'CREATE TABLE `funcionario` (
+  `id_funcionario` int(4) NOT NULL AUTO_INCREMENT primary key,
+  `login` varchar(15) DEFAULT NULL,
+  `nomeFuncionario` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `senha` varchar(50) DEFAULT NULL,
+  `cargo` varchar(50) DEFAULT NULL,
+  `godPass` varchar(50) DEFAULT NULL,
+  `status` int(2) DEFAULT NULL,
+  `admFunc` int(2) DEFAULT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
+
     mysqli_query($conn, $tabelas);
     mysqli_query($conn, $tabelas2);
     mysqli_query($conn, $tabelas3);
     mysqli_query($conn, $tabelas4);
     mysqli_query($conn, $tabelas5);
+    mysqli_query($conn, $tabelas6);
 
   
     

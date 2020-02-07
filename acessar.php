@@ -1,6 +1,5 @@
 <?php
 
-
 include("header.php");
 
 ?>
@@ -28,7 +27,22 @@ include("header.php");
 <div class="text-center">
   <a href="" name="" class="recuperar">Esqueceu a senha?</a>
 </div>
+
+
 </form>
+<?php 
+if(isset($_SESSION['msg'])){
+
+  echo  '<label class="text-center  text-uppercase text-danger" style="margin-left:65px;" >'.$_SESSION['msg'].'</label>'; 
+  unset($_SESSION['msg']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
 </div>
 </div>
 </div>

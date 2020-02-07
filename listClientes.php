@@ -7,6 +7,8 @@ if(isset($_SESSION['login'])){
 }else{ 
     echo ' <script>
     window.location.href = "index.php";
+
+
     </script>';
 }
 
@@ -50,8 +52,8 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$email.'</td>
                 <td>'.$dta_nascimento.'</td>
                 <td><a href="formVenda.php?CPF='.$cpf.'">'.$cpf.'</td>
-                <td><a href="editaCliente.php?id='.$id.' "><button type="button"  class="btn btn-success">Editar</button></a></td>
-                <td><a href="deleteCliente.php?id='.$id.' "><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
+                <td><a href="editaCliente.php?id='.$id.' "><button type="button" class="btn btn-success">Editar</button></a></td>
+                <td><a href="deleteCliente.php?id='.$id.'"><button type="button"  class="btn btn-danger">Excluir</button></a></td></tr>
                 ';
 
             }
@@ -69,6 +71,8 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
 
 include('footer.php');
+
+
 
 
 ?>
