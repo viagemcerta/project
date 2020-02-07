@@ -16,6 +16,19 @@ $queryBanco = mysqli_query($conn, $querySelect);
 ?>
 
 <h1 class="text-center" style="color:#38B6FF;">Lista de Produtos</h1>
+<?php 
+if(isset($_SESSION['cadastrado'])){
+
+  echo  '<label class="text-center mx-auto text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
+  unset($_SESSION['cadastrado']);
+  
+  }else{ 
+
+    
+  }
+  
+  
+  ?>
 <table class="table ">
     <thead class="table table-bordered text-center">
         <tr>
@@ -36,7 +49,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
     if(!$queryBanco == null){
         while($array = mysqli_fetch_array($queryBanco)){
             $id = $array['id_produto'];
-            $nome = $array['nome']; 
+            $nome = $array['nomeProduto']; 
             $email = $array['categoria']; 
             $dta_nascimento = $array['valor']; 
             $cpf = $array['qnt_estoque']; 
