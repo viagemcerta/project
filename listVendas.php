@@ -26,8 +26,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <th>Partida</th>
             <th>Data da partida</th>
             <th>Data da chegada</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+            <th>Cancelamento</th>
         </tr>
         </thead>
     <tbody>
@@ -35,6 +34,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
             <?php
 
             while($array = mysqli_fetch_array($queryBanco)){
+                $id = $array['id_venda'];
                 $cpf = $array['CPF'];
                 $produto = $array['nomeProduto']; 
                 $categoria = $array['categoria']; 
@@ -54,8 +54,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
                 <td>'.$partida.'</td>
                 <td>'.$dta_partida.'</td>
                 <td>'.$dta_chegada.'</td>
-                <td>Editar</td>
-                <td><a href="deleteCliente.php "><button type="button"  class="btn btn-success">Excluir</button></a></td></tr>';
+                <td><a href="deleteVenda.php?id='.$id.' "><button type="button"  class="btn btn-success">Cancelar Venda</button></a></td></tr>';
                 
 
             }

@@ -24,7 +24,8 @@ $tabelas = "CREATE TABLE `addcliente` (
     `email` varchar(50) DEFAULT NULL,
     `CPF` varchar(100) DEFAULT NULL,
     `dta_nascimento` date DEFAULT NULL,
-    `situacao` varchar(50) NOT NULL	
+    `situacao` varchar(50) NOT NULL,
+    `dataCadastro` date DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
   $tabelas2 = "CREATE TABLE `cadastro` (
