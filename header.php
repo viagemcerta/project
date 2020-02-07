@@ -10,6 +10,7 @@ $query = "select * from funcionario where login ='$login'";
 $queryBanco = mysqli_query($conn, $query);
 $array = mysqli_fetch_array($queryBanco);
 $modoAdm = $array['admFunc'];
+$id = $array['id_funcionario'];
 }
 
 
@@ -138,7 +139,7 @@ $modoAdm = $array['admFunc'];
           echo '<a  class="dropdown-item "  href="adm.php">adm</a>';
           }
           ?>
-          <a  class="dropdown-item "  href="logout.php">Sair</a>
+          <a  class="dropdown-item "  href="logout.php?id=<?php echo $id; ?>">Sair</a>
         </div>
         
       </li>

@@ -75,6 +75,7 @@ $tabelas6 = 'CREATE TABLE `funcionario` (
   `senha` varchar(50) DEFAULT NULL,
   `cargo` varchar(50) DEFAULT NULL,
   `godPass` varchar(50) DEFAULT NULL,
+  `status` int(2) DEFAULT NULL,
   `admFunc` int(2) DEFAULT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;';

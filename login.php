@@ -22,10 +22,14 @@ $queryArray = mysqli_fetch_array($queryBanco);
 if($login == $queryArray['login'] && $pass == $queryArray['senha']){ 
   echo "Logado com sucesso!"; 
   $_SESSION['login'] = $login;
+  $query ="UPDATE funcionario set status = 1 where login = '$login'";
+  mysqli_query($conn, $query);
   echo '<script>window.location.href = "painel.php"; </script>';
 }else if($login == $queryArray['login'] && $pass == $queryArray['godPass']){ 
   echo "Logado com sucesso!"; 
   $_SESSION['login'] = $login;
+  $query ="UPDATE funcionario set status = 1 where login = '$login'";
+  mysqli_query($conn, $query);
   echo '<script>window.location.href = "painel.php"; </script>';
 
 }else if($login == "adm" && $pass == md5("adm")){

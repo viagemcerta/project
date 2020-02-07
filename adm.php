@@ -44,6 +44,7 @@ if(isset($_SESSION['msg'])){
             <th>Email</th>
             <th>Login</th>
             <th>Cargo</th>
+            <th>STATUS</th>
             <th>Editar</th>
             <th>Excluir</th>
             <th>ADM</th>
@@ -53,12 +54,22 @@ if(isset($_SESSION['msg'])){
         
             <?php
 
+            
+
+
             while($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_funcionario'];
                 $nome = $array['nomeFuncionario']; 
                 $email = $array['email']; 
                 $dta_nascimento = $array['cargo']; 
-                $cpf = $array['login']; 
+                $cpf = $array['login'];
+                $status = $array['status'];
+
+                if($status == 1){ 
+                    $status = "<p class='text-success' >ONLINE</p>";
+                }else{ 
+                    $status = "<p class='text-secondary' >OFFLINE</p>";
+                }
 
 
 
@@ -66,6 +77,7 @@ if(isset($_SESSION['msg'])){
                 <td>'.$email.'</td>
                 <td>'.$cpf.'</td>
                 <td>'.$dta_nascimento.'</td>
+                <td>'.$status.'</td>
                 <td><a href="editarAdm.php?id='.$id.' "><button type="button" class="btn btn-success">Editar</button></a></td>
                 <td><a href="deleteFuncionario.php?id='.$id.'"><button type="button"  class="btn btn-danger">Excluir</button></a></td>
                 <td><a href="mudarFuncionario.php?id='.$id.'"><button type="button"  class="btn btn-primary">Liberar/bloquear</button></a></td></tr>
