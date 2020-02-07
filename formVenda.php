@@ -46,7 +46,7 @@ $valor = "";
   <div class="form-group col-md-3">
     <select  class="custom-select form-control text-uppercase" id="inputGroupSelect">
       <?php 
-      $queryCliente = "select * from addcliente order by nome asc";
+      $queryCliente = "select * from addcliente where situacao = 'ativo'";
       $clienteBanco = mysqli_query($conn, $queryCliente);
       while($clienteArray = mysqli_fetch_array($clienteBanco)){ 
         $clienteNome = $clienteArray['nome'];
