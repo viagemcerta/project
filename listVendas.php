@@ -9,7 +9,7 @@ if(isset($_SESSION['login'])){
     </script>';
 }
 
-$querySelect = "select * from vendas V, produtos P, addcliente A"; 
+$querySelect = "select * from vendas V, produtos P, addcliente A where v.id_cliente = a.id_cliente"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>
@@ -36,8 +36,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
 
             while($array = mysqli_fetch_array($queryBanco)){
                 $cpf = $array['CPF'];
-                $produto = $array['nome
-                ']; 
+                $produto = $array['nomeProduto']; 
                 $categoria = $array['categoria']; 
                 $preço = $array['valor'];  
                 $destino = $array['destino'];
