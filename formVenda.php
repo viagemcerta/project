@@ -140,13 +140,15 @@ $valor = "";
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de partida</label>
-      <input required type="date" class="form-control" name="dta_partida" id="inputCity">
+      <input required type="date" onkeyup="dataVendas()" class="form-control" name="dta_partida" id="partida">
+    <small id="err"></small>
     </div>
     <div class="form-group col-md-3">
       <label for="inputState">Data de chegada</label>
-      <input required type="date" class="form-control" name="dta_chegada"  id="inputCity">
+      <input required type="date" onkeyup="dataVendas()" class="form-control" name="dta_chegada"  id="chegada">
+      <small id="err2"></small>
     </div>
-    <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
+    <button name="addvenda" id="vendas" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
     <?php 
 if(isset($_SESSION['cadastrado'])){
 

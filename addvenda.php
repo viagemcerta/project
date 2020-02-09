@@ -19,7 +19,7 @@ include("connection.php");
 $msg = "";
 
 if($cpf == null){  
-    $msg = " | CPF";
+    $msg = " | CPF E/OU CLIENTE EM BRANCO";
 }
 //buscando cliente
 $queryCliente = "select * from addcliente where CPF = '$cpf'";

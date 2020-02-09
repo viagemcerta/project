@@ -29,7 +29,7 @@ if(isset($_SESSION['login'])){
     </div>
   <div class="form-group col-md-6">
     <label for="inputData">Preço</label>
-    <input type="number" class="form-control" name="valor" id="inputdata" placeholder="R$" required>
+    <input type="number"  class="form-control" name="valor" id="inputdata" placeholder="R$" required>
   </div>
   <div class="form-group col-md-6">
     <label for="inputCpf">Quantidade</label>
@@ -38,10 +38,11 @@ if(isset($_SESSION['login'])){
   <div class="form-row w-100">
     <div class="form-group col-md-6">
       <label for="inputCity">Data de abastecimento</label>
-      <input type="date" class="form-control" name="dta_abastecimento" id="inputCity" required>
+      <input onkeyup="dataAbastecimento()" type="date" class="form-control" name="dta_abastecimento" id="abastecimento" required>
+      <small id="err" ></small>
     </div>
     <div>
-    <button type="submit" name="cadastrar" class="btn btn-outline cadastro">Cadastrar</button>
+    <button type="submit" name="cadastrar" id="produtos" class="btn btn-outline cadastro">Cadastrar</button>
     </div>
     </form>
 </div>
