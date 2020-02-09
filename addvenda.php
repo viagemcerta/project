@@ -3,6 +3,8 @@ session_start();
 
 if(isset($_POST['addvenda'])){ 
 
+
+
 $cpf = $_POST['cpfCliente'];
 $idProduto = $_POST['id'];
 $valor = $_POST['preco'];
@@ -13,6 +15,12 @@ $dta_chegada = $_POST['dta_chegada'];
 $atualdata = date('yy/m/d');
 include("connection.php");
 
+
+$msg = "";
+
+if($cpf == null){  
+    $msg = " | CPF";
+}
 //buscando cliente
 $queryCliente = "select * from addcliente where CPF = '$cpf'";
 $clienteBanco = mysqli_query($conn, $queryCliente);
@@ -40,8 +48,8 @@ if(mysqli_query($conn, $query)){
 
 }else{ 
     echo ' <script>window.location.href = "formVenda.php"</script>';
- 
-    $_SESSION['cadastrado'] = "Falha ao tentar cadastrar";
+    
+    $_SESSION['cadastrado'] = "Falha ao tentar cadastrar $msg";
 }
 
 

@@ -104,3 +104,8 @@ h1{
     text-transform: uppercase;
     color:#38B6FF;
 }
+
+
+.errMsg{ 
+    text-align: center !important;
+}

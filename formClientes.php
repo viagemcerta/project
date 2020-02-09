@@ -17,20 +17,21 @@ if(isset($_SESSION['login'])){
 
 <div class="container">
     <h1 class="text-center" style="color: #38B6FF; text-align:center;">Adicionar cliente</h1>
-<form action="addcliente.php" method="post" >
+<form class="needs-validation" action="addcliente.php" method="post" >
   <div class="form">
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="inputName4">Nome</label>
-      <input type="text" maxlength="20" name="nome" class="form-control" id="inputName4" required>
+      <input type="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" maxlength="20" name="nome" class="form-control" id="inputName4" required>
     </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">E-mail</label>
-      <input type="email" class="form-control" name="email" id="inputEmail4" required>
+      <input type="email" class="form-control" name="email" id="inputEmail" required>
     </div>
   <div class="form-group col-md-3">
     <label for="inputData">Data de nascimento</label>
-    <input type="date"  class="form-control" name="dta_nascimento" id="inputdata" placeholder="00/00/0000" required>
+    <input type="date"  onkeyup="dataValida()" class="form-control" name="dta_nascimento" id="clienteData" placeholder="00/00/0000" required>
+    <small id="err" ></small>
   </div>
   <div class="form-group col-md-3">
     <label for="inputCpf">CPF</label>

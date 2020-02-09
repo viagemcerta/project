@@ -44,7 +44,8 @@ $valor = "";
   <div class="form">
   <div class="form-row">
   <div class="form-group col-md-3">
-    <select   class="custom-select form-control text-uppercase" id="inputGroupSelect">
+    <select    class="custom-select form-control text-uppercase" id="inputGroupSelect">
+      <option >Selecione o cliente</option>
       <?php 
       $queryCliente = "select * from addcliente where situacao = 'ativo'";
       $clienteBanco = mysqli_query($conn, $queryCliente);
@@ -58,7 +59,7 @@ $valor = "";
         $cpf = $clienteArray['CPF'];
         
         
-        echo '<option class="text-uppercase" id="ajax">'.$clienteNome.'</option>
+        echo '<option required class="text-uppercase" id="ajax">'.$clienteNome.'</option>
         <option class="text-uppercase" style="display: none" id="cpf">'.$cpf.'</option>';
         echo '<script>
         cpf["'.$clienteNome.'"] = "'.$cpf.'";
@@ -83,7 +84,10 @@ $valor = "";
     </select>
   </div>
      <!-- usei esse input só pra enviar o id como post -->
- <input name="cpfCliente"  style="display:none"  id="cpfCliente">
+     <div class="form-group col-md-3 ">
+     <label>CPF</label>
+ <input required type="text" readonly class="form-control" name="cpfCliente"    id="cpfCliente">
+     </div>
 <!-- ################################### -->
  <!-- usei esse input só pra enviar o id como post -->
  <input style="display:none" name="id" value="<?php echo $id;  ?>" type="text">
@@ -143,12 +147,10 @@ $valor = "";
       <input required type="date" class="form-control" name="dta_chegada"  id="inputCity">
     </div>
     <button name="addvenda" type="submit" class="btn btn-outline cadastro">Finalizar venda</button>
-</form>
-</div>
-<?php 
+    <?php 
 if(isset($_SESSION['cadastrado'])){
 
-  echo  '<label class="text-center mx-auto text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
+  echo  '<label class="tex-center text-uppercase text-success" >'.$_SESSION['cadastrado'].'</label>'; 
   unset($_SESSION['cadastrado']);
   
   }else{ 
@@ -158,6 +160,8 @@ if(isset($_SESSION['cadastrado'])){
   
   
   ?>
+  </form>
+</div>
 
 
 
