@@ -32,7 +32,7 @@ $produtoBanco = mysqli_query($conn, $queryProduto);
 $produtoArray = mysqli_fetch_array($produtoBanco);
 $estoque = $produtoArray['qnt_estoque'];
 $estoque = $estoque - 1;
-
+ 
 echo $cpf;
 include('connection.php');
 
