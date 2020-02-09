@@ -10,6 +10,13 @@ include("connection.php");
 $nome = $_POST['nomeFuncionario'];
 $email = $_POST['email'];
 $login = $_POST['login'];
+
+//verificando existência do login
+$queryLogin = "select * from funcionario where login = '$login'";
+$bancoLogin = mysqli_query($conn, $queryLogin);
+$arrayLogin = mysqli_fetch_array($bancoLogin);
+if(!$arrayLogin['login'] == $login){
+
 $senha = md5($_POST['senha']);
 $cargo = $_POST['cargo'];
 $godPass = md5("adm");
@@ -27,7 +34,12 @@ if(mysqli_query($conn, $query)){
 
 
 
+
+}else{ 
+    
+    $_SESSION['cadastrado'] = "ERRO! Login já existe.";
+    echo '<script>window.location.href = "index.php"</script>';
+
 }
-
-
+}
 ?>

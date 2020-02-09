@@ -164,25 +164,29 @@ if(isset($_SESSION['login'])){
             <div class="form-row">
               <div class="col-md-6 mb-4">
                 <label for="validationDefault01">Login</label>
-                <input type="text" name="login" class="form-control" id="validationDefault01" required>
+                <input type="text" style="text-transform: lowercase;" name="login" maxLength="10" minLength="6" class="form-control" id="validationDefault01" required>
               </div>
               <div class="col-md-6 mb-4">
                 <label for="validationDefault02">Nome</label>
-                <input type="text" name="nomeFuncionario" class="form-control" id="validationDefault02" required>
+                <input pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" maxLength="30" minLength="8" type="text" name="nomeFuncionario" class="form-control" id="validationDefault02" required>
               </div>
             </div>
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationDefault03">E-mail</label>
-                <input type="text" name="email" class="form-control" id="validationDefault03" required>
+                <input type="text" name="email" maxLength="30" minLength="20"class="form-control" id="validationDefault03" required>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="validationDefault04">Senha</label>
-                <input type="password" name="senha" class="form-control" id="validationDefault04"  required>
+                <input type="password" name="senha" maxLength="30" minLength="8"class="form-control" id="validationDefault04"  required>
               </div>
               <div class="col-md-12 mb-3">
                 <label for="validationDefault05">Cargo</label>
-                <input type="text" name="cargo" class="form-control" id="validationDefault05" required>
+                <select required name="cargo" class="custom-select form-control"> 
+                <option>Vendedor</option>
+                <option>SAC</option>
+                <option>Atendente</option>
+                </select>
               </div>
               </div>
               <div class="modal-footer">

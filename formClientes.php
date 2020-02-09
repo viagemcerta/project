@@ -22,11 +22,11 @@ if(isset($_SESSION['login'])){
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="inputName4">Nome</label>
-      <input type="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" maxlength="20" name="nome" class="form-control" id="inputName4" required>
+      <input type="text" maxLength="50" minLength="10" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" maxlength="20" name="nome" class="form-control" id="inputName4" required>
     </div>
     <div class="form-group col-md-3 ">
       <label for="inputEmail4">E-mail</label>
-      <input type="email" class="form-control" name="email" id="inputEmail" required>
+      <input type="email" maxLength="50"  class="form-control" name="email" id="inputEmail" required>
     </div>
   <div class="form-group col-md-3">
     <label for="inputData">Data de nascimento</label>
