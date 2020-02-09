@@ -64,6 +64,25 @@ if(!isset($_SESSION['login'])){
     }
   }
 
+    if($_SESSION['login'] == $loginFunc ){
+    echo '
+    <script>
+
+    
+    window.setTimeout(function testando(){ 
+        window.location.href = "logout.php?id='.$idLogin.'";
+        alert("Você foi desconectado por inatividade");
+        
+    }, 10000);
+    
+    
+    
+    
+    </script>'; 
+
+    }
+  
+
 
 ?>
 <!DOCTYPE html>
