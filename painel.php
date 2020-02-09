@@ -43,7 +43,7 @@ $queryBanco = mysqli_query($conn, $querySelect);
             for($x = 0; $x < 5; $x++){
             if($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_cliente'];
-                $queryVenda = "select * from vendas where id_cliente = '$id'";
+                $queryVenda = "select * from vendas v, addcliente c where v.id_cliente = c.id_cliente";
                 $bancoVenda = mysqli_query($conn, $queryVenda);
                 $arrayVenda = mysqli_fetch_array($bancoVenda);
 
