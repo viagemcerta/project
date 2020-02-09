@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_POST['addvenda'])){ 
 
-$cpf = $_POST['cpf'];
+$cpf = $_POST['cpfCliente'];
 $idProduto = $_POST['id'];
 $valor = $_POST['preco'];
 $partida = $_POST['partida'];
@@ -25,7 +25,7 @@ $produtoArray = mysqli_fetch_array($produtoBanco);
 $estoque = $produtoArray['qnt_estoque'];
 $estoque = $estoque - 1;
 
-
+echo $cpf;
 include('connection.php');
 
 $query = "insert into vendas(id_cliente,id_produto,valor,dta_venda,partida,destino,dta_partida,dta_chegada)

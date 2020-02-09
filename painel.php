@@ -48,7 +48,7 @@ if(!isset($_SESSION['login'])){
             for($x = 0; $x < 5; $x++){
             if($array = mysqli_fetch_array($queryBanco)){
                 $id = $array['id_cliente'];
-                $queryVenda = "select * from vendas where id_cliente = '$id' and dta_partida >= '$atualdata' ";
+                $queryVenda = "select * from vendas where id_cliente = '$id'";
                 $bancoVenda = mysqli_query($conn, $queryVenda);
                 $arrayVenda = mysqli_fetch_array($bancoVenda);
 
@@ -63,7 +63,7 @@ if(!isset($_SESSION['login'])){
                 $dta_partida = $arrayVenda['dta_partida']; 
                 $dta_chegada = $arrayVenda['dta_chegada']; 
 
-
+                
 
                 echo '<tr><td>'.$nome.'</td>
                 <td>'.$email.'</td>

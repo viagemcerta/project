@@ -9,9 +9,21 @@ if (isset($_SESSION['login'])) {
   $query = "select * from funcionario where login ='$login'";
   $queryBanco = mysqli_query($conn, $query);
   $array = mysqli_fetch_array($queryBanco);
+  
   if (isset($array['admFunc'])) {
     $modoAdm = $array['admFunc'];
     $id = $array['id_funcionario'];
+
+    echo '<script>
+
+    setTimeout(function(){ 
+      window.location.href = "logout.php?id='.$id.'";
+      alert("Você foi desconectado devido a inatividade");
+    }, 10000);
+    
+    
+    </script>';
+    
   } else {
     $modoAdm = 3;
     $id = null;

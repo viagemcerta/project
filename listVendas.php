@@ -9,7 +9,7 @@ if(isset($_SESSION['login'])){
     </script>';
 }
 
-$querySelect = "select * from vendas V, produtos P, addcliente A where v.id_cliente = a.id_cliente"; 
+$querySelect = "select * from vendas V, produtos P, addcliente A where v.id_cliente = a.id_cliente and v.id_produto = p.id_produto"; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
 ?>

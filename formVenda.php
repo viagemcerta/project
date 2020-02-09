@@ -44,25 +44,46 @@ $valor = "";
   <div class="form">
   <div class="form-row">
   <div class="form-group col-md-3">
-    <select  class="custom-select form-control text-uppercase" id="inputGroupSelect">
+    <select   class="custom-select form-control text-uppercase" id="inputGroupSelect">
       <?php 
-      $queryCliente = "select * from addcliente order by nome asc";
+      $queryCliente = "select * from addcliente where situacao = 'ativo'";
       $clienteBanco = mysqli_query($conn, $queryCliente);
+      echo '<script>
+      var cpf = [];
+
+      
+      </script>';
       while($clienteArray = mysqli_fetch_array($clienteBanco)){ 
         $clienteNome = $clienteArray['nome'];
         $cpf = $clienteArray['CPF'];
         
-        echo '<option class="text-uppercase" >'.$clienteNome.'</option>';
+        
+        echo '<option class="text-uppercase" id="ajax">'.$clienteNome.'</option>
+        <option class="text-uppercase" style="display: none" id="cpf">'.$cpf.'</option>';
+        echo '<script>
+        cpf["'.$clienteNome.'"] = "'.$cpf.'";
+       
+        </script>';
       }
 
+      echo '<script>
+      $("select").click(function(){ 
+        var x =  $(this).children(":selected").text();
+       console.log(x);
+       $("#cpfCliente").val(cpf[x]);
+ 
+      });
       
+      
+      </script>';
+     
+     
       
       ?>
     </select>
   </div>
-
-  <!-- usei esse input só pra enviar o cpf como post -->
-  <input style="display:none" name="cpf" value="<?php echo $cpf;  ?>" type="text">
+     <!-- usei esse input só pra enviar o id como post -->
+ <input name="cpfCliente"  style="display:none"  id="cpfCliente">
 <!-- ################################### -->
  <!-- usei esse input só pra enviar o id como post -->
  <input style="display:none" name="id" value="<?php echo $id;  ?>" type="text">
