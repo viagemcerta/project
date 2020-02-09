@@ -7,14 +7,9 @@ include("header.php");
 $querySelect = "select * from addcliente where situacao = 'ativo' and dataCadastro >= '$atualdata' "; 
 $queryBanco = mysqli_query($conn, $querySelect);
 
-if(!isset($_SESSION['login'])){ 
-   echo ' <script>window.location.href = "index.php"</script>';
-    }
+
 
 ?>
-
-
-
 
 <div>
     <section>

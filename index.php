@@ -34,7 +34,7 @@ include("connection.php");
 
     <title>VIAGEM CERTA</title>
   </head>
-  <body>
+  <body onload="msgLogout()">
  
   <div class="container primeiro">
     <h1 class="text-center text-uppercase titulo" onclick="clicks()">Viagem Certa</h1>

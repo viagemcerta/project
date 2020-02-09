@@ -29,7 +29,40 @@ if (isset($_SESSION['login'])) {
     $id = null;
   }
 }
+if(isset($_SESSION['login'])){
+$login = $_SESSION['login'];
 
+$queryLogin = "select * from funcionario where login = '$login'";
+
+$loginBanco = mysqli_query($conn, $queryLogin);
+
+$loginArray = mysqli_fetch_array($loginBanco);
+$loginFunc = $loginArray['login'];
+$idLogin = $loginArray['id_funcionario'];
+
+if(!isset($_SESSION['login'])){ 
+   echo ' <script>window.location.href = "index.php"</script>';
+    }
+
+
+    if($_SESSION['login'] == $loginFunc ){
+    echo '
+    <script>
+
+    
+    window.setTimeout(function testando(){ 
+        window.location.href = "logout.php?id='.$idLogin.'";
+        alert("Você foi desconectado por inatividade");
+        
+    }, 10000);
+    
+    
+    
+    
+    </script>'; 
+
+    }
+  }
 
 
 ?>
